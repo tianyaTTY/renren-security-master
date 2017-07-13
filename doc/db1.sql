@@ -202,7 +202,7 @@ INSERT INTO `yl_specialist` VALUES ('53', '张浩', '27','4','公卫副主任医
 
 
 
-
+--相关查询的sql语句
 select * from yl_organization o LEFT JOIN yl_hospital h ON o.id = h.orgId LEFT JOIN yl_department d ON h.id = d.hospitalId LEFT JOIN yl_specialist s ON d.id = s.dpartment WHERE o.id=1
 select * from yl_hospital h LEFT JOIN yl_department d ON h.id = d.hospitalId LEFT JOIN yl_specialist s ON d.id = s.department where h.id=1;
 Sql: SELECT b.bm id,b.mc text FROM SYS_XX_DICT A,SYS_XX_DICT_DETAIL B WHERE A.BM=? AND A.ID=B.DICT_ID AND B.QYBZ='Y' ORDER BY B.ORDER_ID
