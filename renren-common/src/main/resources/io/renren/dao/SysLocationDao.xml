@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.dao.SysLocationDao">
+
+	<select id="queryObject" resultType="io.renren.entity.SysLocationEntity">
+		select * from tb_location where id = #{value}
+	</select>
+
+	<select id="queryList" resultType="io.renren.entity.SysLocationEntity">
+		select * from tb_location
+		<where>
+			<if test="key != null and key.trim() != ''">
+				`name` like concat('%',#{key},'%')
+			</if>
+		</where>
+		order by id desc 
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from tb_location
+		<where>
+			<if test="key != null and key.trim() != ''">
+				`name` like concat('%',#{key},'%')
+			</if>
+		</where>
+	</select>
+	 
+	<insert id="save" parameterType="io.renren.entity.SysLocationEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_location
+		(
+			`name`,
+			`address`,
+			`contact`,
+			`phone`,
+			`link`,
+			`content`,
+			`author`,
+			`createDate`,
+			`updateDate`,
+			`category`,
+			`longitude`,
+			`latitude`,
+			`remark`
+		)
+		values
+		(
+			#{name},
+			#{address},
+			#{contact},
+			#{phone},
+			#{link},
+			#{content},
+			#{author},
+			#{createDate},
+			#{updateDate},
+			#{category},
+			#{longitude},
+			#{latitude},
+			#{remark}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="io.renren.entity.SysLocationEntity">
+		update tb_location
+		<set>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="address != null">`address` = #{address}, </if>
+			<if test="contact != null">`contact` = #{contact}, </if>
+			<if test="link != null">`link` = #{link}, </if>
+			<if test="content != null">`content` = #{content} </if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from tb_location where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from tb_location where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
