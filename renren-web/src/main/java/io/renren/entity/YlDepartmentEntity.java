@@ -17,7 +17,7 @@ public class YlDepartmentEntity {
 	@NotBlank(message="参数值不能为空")
 	private Integer hospitalId;//医院ID
 	private String remark;//备注
-	private String hospitalName;//医院名
+	private String hosName;//医院名
 	private Integer orgId;//医疗机构ID
 	private String orgName;//医疗组织名称
 
@@ -53,12 +53,12 @@ public class YlDepartmentEntity {
 		this.remark = remark;
 	}
 
-	public String getHospitalName() {
-		return hospitalName;
+	public String getHosName() {
+		return hosName;
 	}
 
-	public void setHospitalName(String hospitalName) {
-		this.hospitalName = hospitalName;
+	public void setHosName(String hosName) {
+		this.hosName = hosName;
 	}
 
 	public Integer getOrgId() {

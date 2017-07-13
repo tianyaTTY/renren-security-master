@@ -5,8 +5,8 @@ $(function () {
         colModel: [			
 			{ label: 'ID', name: 'id', width: 30, key: true },
 			{ label: '科室名', name: 'name', width: 60 },
-            { label: '医院名', name: 'principal', width: 60 },
-            { label: '医疗组织', name: 'address', width: 60 },
+            { label: '医院名', name: 'hosName', width: 60 },
+            { label: '医疗组织', name: 'orgName', width: 60 },
 			{ label: '备注', name: 'remark', width: 80 }
         ],
 		viewrecords: true,
@@ -59,6 +59,7 @@ var vm = new Vue({
 		},
 		showList: true,
 		title: null,
+        department: {},
 		hospital: {},
 		organization:{},
 		ylTree:{
@@ -69,7 +70,7 @@ var vm = new Vue({
 		}
 	},
 	methods: {
-        getOrg: function(id){
+        getYlTree: function(id){
             //加载机构树
             $.get("../yl/organization/select", function(r){
                 ztree = $.fn.zTree.init($("#menuTree"), setting, r.ylList);
@@ -85,8 +86,8 @@ var vm = new Vue({
 		add: function(){
 			vm.showList = false;
 			vm.title = "新增";
-			vm.hospital = {};
-            vm.getOrg();
+			vm.department = {};
+            vm.getYlTree();
 		},
 		update: function () {
 			var id = getSelectedRow();
@@ -94,13 +95,14 @@ var vm = new Vue({
 				return ;
 			}
 			
-			$.get("../yl/hospital/info/"+id, function(r){
+			$.get("../yl/department/info/"+id, function(r){
                 vm.showList = false;
                 vm.title = "修改";
+                vm.department = r.department;
                 vm.hospital = r.hospital;
                 vm.organization = r.organization;
 				vm.ylTree.id = r.organization.id;
-                vm.getOrg();
+                vm.getYlTree();
             });
 		},
 		del: function (event) {
@@ -112,7 +114,7 @@ var vm = new Vue({
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: "../yl/hospital/delete",
+				    url: "../yl/department/delete",
                     contentType: "application/json",
 				    data: JSON.stringify(ids),
 				    success: function(r){
@@ -128,12 +130,12 @@ var vm = new Vue({
 			});
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.hospital.id == null ? "../yl/hospital/save" : "../yl/hospital/update";
+			var url = vm.hospital.id == null ? "../yl/department/save" : "../yl/department/update";
 			$.ajax({
 				type: "POST",
 			    url: url,
                 contentType: "application/json",
-			    data: JSON.stringify(vm.hospital),
+			    data: JSON.stringify(vm.department),
 			    success: function(r){
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
