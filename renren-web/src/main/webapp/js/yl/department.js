@@ -1,16 +1,12 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: '../yl/hospital/list',
+        url: '../yl/department/list',
         datatype: "json",
         colModel: [			
 			{ label: 'ID', name: 'id', width: 30, key: true },
-			{ label: '医院名', name: 'name', width: 60 },
-            { label: '医院负责人', name: 'principal', width: 60 },
-            { label: '医院地址', name: 'address', width: 60 },
-            { label: '业务范围', name: 'businessScope', width: 60 },
-            { label: '电话', name: 'phone', width: 60 },
-            { label: '手机号', name: 'mobile', width: 60 },
-            { label: '医院组织', name: 'orgName', width: 60 },
+			{ label: '科室名', name: 'name', width: 60 },
+            { label: '医院名', name: 'principal', width: 60 },
+            { label: '医疗组织', name: 'address', width: 60 },
 			{ label: '备注', name: 'remark', width: 80 }
         ],
 		viewrecords: true,

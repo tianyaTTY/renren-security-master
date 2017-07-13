@@ -16,6 +16,7 @@ io\renren\entity\YlHospitalEntity.class
 io\renren\service\impl\SysOssServiceImpl.class
 io\renren\controller\SysLogController.class
 io\renren\service\impl\YlOrganizationServiceImpl.class
+io\renren\vo\YlTreeEntity.class
 io\renren\entity\YlOrganizationEntity.class
 io\renren\service\YlOrganizationService.class
 io\renren\service\SysOssService.class

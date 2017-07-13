@@ -32,7 +32,7 @@
 	</insert>
 	
 	<update id="update" parameterType="io.renren.entity.YlHospitalEntity">
-		update yl_hospital set `name` = #{name}, remark = #{principal}, remark = #{address}, remark = #{businessScope}, remark = #{phone}, remark = #{mobile}, remark = #{orgId}, remark = #{remark}
+		update yl_hospital set `name` = #{name}, principal = #{principal}, address = #{address}, businessScope = #{businessScope}, phone = #{phone}, mobile = #{mobile}, orgId = #{orgId}, remark = #{remark}
 			 where id = #{id}
 	</update>
 

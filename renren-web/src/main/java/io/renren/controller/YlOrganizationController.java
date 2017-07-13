@@ -7,10 +7,12 @@ import io.renren.utils.PageUtils;
 import io.renren.utils.Query;
 import io.renren.utils.R;
 import io.renren.validator.ValidatorUtils;
+import io.renren.vo.YlTreeEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -55,23 +57,30 @@ public class YlOrganizationController extends AbstractController {
 	}
 
 	/**
-	 * 选择医疗组织
+	 * 菜单树需要医疗组织
 	 */
 	@RequestMapping("/select")
 	@RequiresPermissions("yl:organization:select")
 	public R select(){
 		//查询列表数据
 		List<YlOrganizationEntity> orgList = ylOrganizationService.queryList(null);
-
+		List<YlTreeEntity> ylList = new ArrayList<YlTreeEntity>();
+		for(int i=0;i<orgList.size();i++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(orgList.get(i).getId());
+			ylTreeEntity.setName(orgList.get(i).getName());
+			ylTreeEntity.setParentId(0);
+			ylList.add(ylTreeEntity);
+		}
 		//添加顶级菜单
-		YlOrganizationEntity root = new YlOrganizationEntity();
-		root.setMenuId(0L);
-		root.setName("一级菜单");
-		root.setParentId(-1L);
+		YlTreeEntity root = new YlTreeEntity();
+		root.setId(0);
+		root.setName("医疗信息");
+		root.setParentId(-1);
 		root.setOpen(true);
-		menuList.add(root);
+		ylList.add(root);
 
-		return R.ok().put("orgList", orgList);
+		return R.ok().put("ylList", ylList);
 	}
 
 	/**
