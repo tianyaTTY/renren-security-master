@@ -11,10 +11,12 @@ import io.renren.utils.PageUtils;
 import io.renren.utils.Query;
 import io.renren.utils.R;
 import io.renren.validator.ValidatorUtils;
+import io.renren.vo.YlTreeEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -52,7 +54,7 @@ public class YlDepartmentController extends AbstractController {
 	}
 
 	/**
-	 * 配置医院信息
+	 * 配置科室信息
 	 */
 	@RequestMapping("/info/{id}")
 	@RequiresPermissions("yl:department:info")
@@ -60,9 +62,56 @@ public class YlDepartmentController extends AbstractController {
 		YlDepartmentEntity department = ylDepartmentService.queryObject(id);
 		YlHospitalEntity hospital = ylHospitalService.queryObject(department.getHospitalId());
 		YlOrganizationEntity organization = ylOrganizationService.queryObject(hospital.getOrgId());
-		return R.ok().put("hospital", hospital).put("hospital",hospital).put("organization",organization);
+		return R.ok().put("department", department).put("hospital",hospital).put("organization",organization);
 	}
-	
+
+	/**
+	 * 查询专家所属的机构树
+	 */
+	@RequestMapping("/select")
+	@RequiresPermissions("yl:department:select")
+	public R select(){
+		//TODO 选择树节点提交的数据，修改跟进进来的节点
+		//查询树结构
+		List<YlOrganizationEntity> orgList = ylOrganizationService.queryList(null);
+		List<YlHospitalEntity> hosList = ylHospitalService.queryList(null);
+		List<YlDepartmentEntity> depList = ylDepartmentService.queryList(null);
+		List<YlTreeEntity> ylList = new ArrayList<YlTreeEntity>();
+		for(int i=0;i<orgList.size();i++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(orgList.get(i).getId());
+			ylTreeEntity.setName(orgList.get(i).getName());
+			ylTreeEntity.setParentId(0);
+			ylTreeEntity.setOpen(true);
+			ylList.add(ylTreeEntity);
+		}
+		for(int j=0;j<hosList.size();j++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(hosList.get(j).getId()+1000);
+			ylTreeEntity.setName(hosList.get(j).getName());
+			ylTreeEntity.setParentId(hosList.get(j).getOrgId());
+			ylTreeEntity.setOpen(true);
+			ylList.add(ylTreeEntity);
+		}
+		for(int k=0;k<depList.size();k++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(depList.get(k).getId()+2000);
+			ylTreeEntity.setName(depList.get(k).getName());
+			ylTreeEntity.setParentId(depList.get(k).getHospitalId()+1000);
+			ylTreeEntity.setOpen(true);
+			ylList.add(ylTreeEntity);
+		}
+		//添加顶级菜单
+		YlTreeEntity root = new YlTreeEntity();
+		root.setId(0);
+		root.setName("医疗信息");
+		root.setParentId(-1);
+		root.setOpen(true);
+		ylList.add(root);
+
+		return R.ok().put("ylList", ylList);
+	}
+
 	/**
 	 * 保存科室信息
 	 */

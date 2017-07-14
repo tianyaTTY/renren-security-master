@@ -1,4 +1,5 @@
 io\renren\entity\YlDepartmentEntity.class
+io\renren\service\YlSpecialistService.class
 io\renren\service\impl\YlDepartmentServiceImpl.class
 io\renren\controller\SysOssController.class
 io\renren\task\TestTask.class
@@ -13,7 +14,9 @@ io\renren\entity\SysOssEntity.class
 io\renren\controller\SysConfigController.class
 io\renren\dao\YlOrganizationDao.class
 io\renren\controller\SysLocationController.class
+io\renren\entity\YlSpecialistEntity.class
 io\renren\controller\SysPageController.class
+io\renren\service\impl\YlSpecialistServiceImpl.class
 io\renren\service\YlHospitalService.class
 io\renren\controller\YlHospitalController.class
 io\renren\controller\YlDepartmentController.class
@@ -24,4 +27,6 @@ io\renren\service\impl\YlOrganizationServiceImpl.class
 io\renren\vo\YlTreeEntity.class
 io\renren\entity\YlOrganizationEntity.class
 io\renren\service\YlOrganizationService.class
+io\renren\controller\YlSpecialistController.class
+io\renren\dao\YlSpecialistDao.class
 io\renren\service\SysOssService.class

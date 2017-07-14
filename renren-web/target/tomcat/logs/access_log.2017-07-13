@@ -360,3 +360,16 @@
 0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:48:02 +0800] "GET /yl/department.html HTTP/1.1" 200 3082 http-bio-80-exec-9 61
 0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:48:02 +0800] "GET /js/yl/department.js?_1499942882531 HTTP/1.1" 200 4756 http-bio-80-exec-10 14
 0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:48:02 +0800] "GET /yl/department/list?_search=false&nd=1499942882692&limit=10&page=1&sidx=&order=asc&_=1499942882603 HTTP/1.1" 200 1536 http-bio-80-exec-10 72
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:56:49 +0800] "GET /index.html HTTP/1.1" 302 - http-bio-80-exec-1 56
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:56:49 +0800] "GET /login.html HTTP/1.1" 304 - http-bio-80-exec-2 32
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:56:49 +0800] "GET /captcha.jpg HTTP/1.1" 200 2905 http-bio-80-exec-3 213
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:19 +0800] "POST /sys/login HTTP/1.1" 200 10 http-bio-80-exec-5 41
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:19 +0800] "GET /index.html HTTP/1.1" 200 5503 http-bio-80-exec-6 9
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:19 +0800] "GET /sys/user/info?_1499943559372 HTTP/1.1" 200 181 http-bio-80-exec-8 55
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:19 +0800] "GET /sys/menu/user?_1499943559371 HTTP/1.1" 200 3083 http-bio-80-exec-7 64
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:19 +0800] "GET /sys/main.html HTTP/1.1" 200 631 http-bio-80-exec-9 224
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:21 +0800] "GET /yl/department.html HTTP/1.1" 200 3082 http-bio-80-exec-9 35
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:21 +0800] "GET /js/yl/department.js?_1499943561721 HTTP/1.1" 200 4756 http-bio-80-exec-9 5
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:21 +0800] "GET /yl/department/list?_search=false&nd=1499943561813&limit=10&page=1&sidx=&order=asc&_=1499943561739 HTTP/1.1" 200 1536 http-bio-80-exec-9 79
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:23 +0800] "GET /yl/department/info/4?_=1499943561740 HTTP/1.1" 200 314 http-bio-80-exec-5 36
+0:0:0:0:0:0:0:1 - - [13/Jul/2017:18:59:23 +0800] "GET /yl/organization/select?_=1499943561741 HTTP/1.1" 200 1017 http-bio-80-exec-6 28

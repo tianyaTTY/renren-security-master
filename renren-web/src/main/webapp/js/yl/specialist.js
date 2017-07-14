@@ -1,12 +1,17 @@
 $(function () {
     $("#jqGrid").jqGrid({
-        url: '../yl/department/list',
+        url: '../yl/specialist/list',
         datatype: "json",
         colModel: [			
 			{ label: 'ID', name: 'id', width: 30, key: true },
-			{ label: '科室名', name: 'name', width: 60 },
+			{ label: '专家名', name: 'name', width: 60 },
+            { label: '科室名', name: 'departmentName', width: 60 },
             { label: '医院名', name: 'hosName', width: 60 },
-            { label: '医疗组织', name: 'orgName', width: 60 },
+            { label: '机构名', name: 'orgName', width: 60 },
+            { label: '职称', name: 'title', width: 60 },
+            { label: '电话', name: 'phone', width: 60 },
+            { label: '手机号', name: 'mobile', width: 60 },
+            { label: '地址', name: 'address', width: 60 },
 			{ label: '备注', name: 'remark', width: 80 }
         ],
 		viewrecords: true,
@@ -59,6 +64,7 @@ var vm = new Vue({
 		},
 		showList: true,
 		title: null,
+        specialist: {},
         department: {},
 		hospital: {},
 		organization:{},
@@ -72,7 +78,7 @@ var vm = new Vue({
 	methods: {
         getYlTree: function(id){
             //加载机构树
-            $.get("../yl/hospital/select", function(r){
+            $.get("../yl/department/select", function(r){
                 ztree = $.fn.zTree.init($("#menuTree"), setting, r.ylList);
                 var node = ztree.getNodeByParam("id", vm.ylTree.id);
                 ztree.selectNode(node);
@@ -86,7 +92,7 @@ var vm = new Vue({
 		add: function(){
 			vm.showList = false;
 			vm.title = "新增";
-			vm.department = {};
+			vm.specialist = {};
             vm.getYlTree();
 		},
 		update: function () {
@@ -95,13 +101,14 @@ var vm = new Vue({
 				return ;
 			}
 			
-			$.get("../yl/department/info/"+id, function(r){
+			$.get("../yl/specialist/info/"+id, function(r){
                 vm.showList = false;
                 vm.title = "修改";
+                vm.specialist = r.specialist;
                 vm.department = r.department;
                 vm.hospital = r.hospital;
                 vm.organization = r.organization;
-				vm.ylTree.id = r.hospital.id;
+				vm.ylTree.id = r.department.id;
                 vm.getYlTree();
             });
 		},
@@ -114,7 +121,7 @@ var vm = new Vue({
 			confirm('确定要删除选中的记录？', function(){
 				$.ajax({
 					type: "POST",
-				    url: "../yl/department/delete",
+				    url: "../yl/specialist/delete",
                     contentType: "application/json",
 				    data: JSON.stringify(ids),
 				    success: function(r){
@@ -130,12 +137,12 @@ var vm = new Vue({
 			});
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.hospital.id == null ? "../yl/department/save" : "../yl/department/update";
+			var url = vm.hospital.id == null ? "../yl/specialist/save" : "../yl/specialist/update";
 			$.ajax({
 				type: "POST",
 			    url: url,
                 contentType: "application/json",
-			    data: JSON.stringify(vm.department),
+			    data: JSON.stringify(vm.specialist),
 			    success: function(r){
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
@@ -152,7 +159,7 @@ var vm = new Vue({
                 type: 1,
                 offset: '50px',
                 skin: 'layui-layer-molv',
-                title: "选择医院",
+                title: "选择科室",
                 area: ['300px', '450px'],
                 shade: 0,
                 shadeClose: false,

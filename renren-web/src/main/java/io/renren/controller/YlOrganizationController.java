@@ -62,6 +62,7 @@ public class YlOrganizationController extends AbstractController {
 	@RequestMapping("/select")
 	@RequiresPermissions("yl:organization:select")
 	public R select(){
+		//TODO 选择树节点提交的数据，修改跟进进来的节点
 		//查询列表数据
 		List<YlOrganizationEntity> orgList = ylOrganizationService.queryList(null);
 		List<YlTreeEntity> ylList = new ArrayList<YlTreeEntity>();
@@ -69,6 +70,7 @@ public class YlOrganizationController extends AbstractController {
 			YlTreeEntity ylTreeEntity = new YlTreeEntity();
 			ylTreeEntity.setId(orgList.get(i).getId());
 			ylTreeEntity.setName(orgList.get(i).getName());
+			ylTreeEntity.setOpen(true);
 			ylTreeEntity.setParentId(0);
 			ylList.add(ylTreeEntity);
 		}

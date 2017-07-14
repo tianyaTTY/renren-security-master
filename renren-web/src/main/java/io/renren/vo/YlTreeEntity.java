@@ -17,6 +17,7 @@ public class YlTreeEntity {
 	private Integer parentId;//父ID
 	private boolean open;//树是否打开
 	private String parentName;//父名
+	private Integer newId;//新的排序号
 
 	public Integer getId() {
 		return id;
@@ -56,5 +57,13 @@ public class YlTreeEntity {
 
 	public void setParentName(String parentName) {
 		this.parentName = parentName;
+	}
+
+	public Integer getNewId() {
+		return newId;
+	}
+
+	public void setNewId(Integer newId) {
+		this.newId = newId;
 	}
 }

@@ -1,5 +1,6 @@
 package io.renren.controller;
 
+import com.alibaba.fastjson.JSON;
 import io.renren.annotation.SysLog;
 import io.renren.entity.YlHospitalEntity;
 import io.renren.entity.YlOrganizationEntity;
@@ -9,10 +10,12 @@ import io.renren.utils.PageUtils;
 import io.renren.utils.Query;
 import io.renren.utils.R;
 import io.renren.validator.ValidatorUtils;
+import io.renren.vo.YlTreeEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -70,6 +73,46 @@ public class YlHospitalController extends AbstractController {
 		ylHospitalService.save(hospital);
 		
 		return R.ok();
+	}
+
+	/**
+	 * 查询科室所属的机构树
+	 */
+	@RequestMapping("/select")
+	@RequiresPermissions("yl:hospital:select")
+	public R select(){
+		//TODO 选择树节点提交的数据，修改跟进进来的节点
+		//查询树结构
+		List<YlOrganizationEntity> orgList = ylOrganizationService.queryList(null);
+		List<YlHospitalEntity> hosList = ylHospitalService.queryList(null);
+		List<YlTreeEntity> ylList = new ArrayList<YlTreeEntity>();
+		int count=0;
+		for(int i=0;i<orgList.size();i++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(orgList.get(i).getId());
+			ylTreeEntity.setName(orgList.get(i).getName());
+			ylTreeEntity.setOpen(true);
+			ylTreeEntity.setParentId(0);
+			ylTreeEntity.setNewId(count++);
+			ylList.add(ylTreeEntity);
+		}
+		for(int j=0;j<hosList.size();j++){
+			YlTreeEntity ylTreeEntity = new YlTreeEntity();
+			ylTreeEntity.setId(hosList.get(j).getId()+1000);
+			ylTreeEntity.setName(hosList.get(j).getName());
+			ylTreeEntity.setOpen(true);
+			ylTreeEntity.setParentId(hosList.get(j).getOrgId());
+			ylList.add(ylTreeEntity);
+		}
+		//添加顶级菜单
+		YlTreeEntity root = new YlTreeEntity();
+		root.setId(0);
+		root.setName("医疗信息");
+		root.setParentId(-1);
+		root.setOpen(true);
+		ylList.add(root);
+
+		return R.ok().put("ylList", ylList);
 	}
 	
 	/**

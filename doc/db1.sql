@@ -188,13 +188,6 @@ INSERT INTO `yl_specialist` VALUES ('39', '马树霞', '23','3','副主任医师
 INSERT INTO `yl_specialist` VALUES ('40', '哈斯', '24','3','副主任医师','','','','');
 INSERT INTO `yl_specialist` VALUES ('41', '贺希格', '24','3','副主任医师','','','','');
 INSERT INTO `yl_specialist` VALUES ('42', '徐敏', '25','4','预防医学主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('43', '张金华', null,'8','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('44', '阿日雅扎布', null,'9','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('45', '白忠', null,'10','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('46', '阿拉腾其其格', null,'10','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('47', '巴德玛格日乐', null,'7','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('48', '斯日吉宁布', null,'7','副主任医师','','','','');
-INSERT INTO `yl_specialist` VALUES ('49', '额登其劳', null,'12','副主任医师','','','','');
 INSERT INTO `yl_specialist` VALUES ('50', '张建军', '25','4','中医主任医师','','','','');
 INSERT INTO `yl_specialist` VALUES ('51', '闫玉生', '26','4','副主任检验师','','','','');
 INSERT INTO `yl_specialist` VALUES ('52', '赵亮', '26','4','副主任检验师','','','','');
@@ -206,4 +199,47 @@ INSERT INTO `yl_specialist` VALUES ('53', '张浩', '27','4','公卫副主任医
 select * from yl_organization o LEFT JOIN yl_hospital h ON o.id = h.orgId LEFT JOIN yl_department d ON h.id = d.hospitalId LEFT JOIN yl_specialist s ON d.id = s.dpartment WHERE o.id=1
 select * from yl_hospital h LEFT JOIN yl_department d ON h.id = d.hospitalId LEFT JOIN yl_specialist s ON d.id = s.department where h.id=1;
 Sql: SELECT b.bm id,b.mc text FROM SYS_XX_DICT A,SYS_XX_DICT_DETAIL B WHERE A.BM=? AND A.ID=B.DICT_ID AND B.QYBZ='Y' ORDER BY B.ORDER_ID
+
+-- ----------------------------
+-- 旅游农牧家乐农牧业技术指导表设计
+-- ----------------------------
+
+CREATE TABLE `tb_issue`(
+	`id` int(10) NOT NULL auto_increment,
+	`name` varchar(50) NOT NULL,
+	`address` varchar(500),
+	`contact` varchar(50),
+	`phone` varchar(20),
+	`link` varchar(200),
+	`content` mediumtext,
+	`author` varchar(10),
+	`createDate` Date,
+	`updateDate` Date,
+	`category` int(10) NOT NULL,
+	`remark` varchar(500),
+	PRIMARY KEY  (`id`)
+)	ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- ----------------------------
+-- 涉及位置信息类目的表设计
+-- ----------------------------
+CREATE TABLE `tb_location`(
+	`id` int(10) NOT NULL auto_increment,
+	`name` varchar(50) NOT NULL,
+	`address` varchar(500),
+	`contact` varchar(50),
+	`phone` varchar(20),
+	`link` varchar(200),
+	`content` mediumtext,
+	`author` varchar(10),
+	`createDate` Date,
+	`updateDate` Date,
+	`category` int(10) NOT NULL,
+	`longitude` varchar(20) NOT NULL,
+	`latitude`	varchar(20) NOT NULL,
+	`remark` varchar(500),
+	PRIMARY KEY  (`id`)
+)	ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
