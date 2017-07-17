@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab326fd-a534-4a78-8233-19c270260fbe" name="Default" comment="增加相关查询的sql语句">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/dao/XxLocationDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/entity/XxLocationEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/service/XxLocationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/service/impl/XxLocationServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/resources/io/renren/dao/XxLocationDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/src/main/webapp/WEB-INF/page/xx/location.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/src/main/java/io/renren/dao/SysLocationDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/src/main/java/io/renren/entity/SysLocationEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/src/main/java/io/renren/service/SysLocationService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/src/main/java/io/renren/service/impl/SysLocationServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/target/classes/io/renren/dao/SysLocationDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/target/classes/io/renren/entity/SysLocationEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/target/classes/io/renren/service/SysLocationService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-common/target/classes/io/renren/service/impl/SysLocationServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/SysLocationController.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/controller/SysLocationController.java" afterPath="$PROJECT_DIR$/renren-web/src/main/java/io/renren/controller/XxLocationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlDepartmentController.class" afterPath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlDepartmentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlHospitalController.class" afterPath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlHospitalController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlOrganizationController.class" afterPath="$PROJECT_DIR$/renren-web/target/classes/io/renren/controller/YlOrganizationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/renren-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/renren-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/renren-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-14" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-14" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/error.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/error.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/renren-security.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-17" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-17" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/info.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/slow_sql.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/slow_sql.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/warn.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/warn.log" />
     </list>
     <ignored path="$PROJECT_DIR$/renren-common/target/" />
@@ -189,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XxLocationDao.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="XxLocationDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/renren-web/src/main/resources/io/renren/dao/XxLocationDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="1568">
+              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding>
                 <marker date="1500281888053" expanded="true" signature="278:320" ph="select * fro... xx_location" />
                 <marker date="1500281888053" expanded="true" signature="1046:1141" ph="insert into xx_location... " />
@@ -203,11 +179,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YlDepartmentController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/renren-web/src/main/java/io/renren/controller/YlDepartmentController.java">
+      <file leaf-file-name="renren-security.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/renren-security.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="28" selection-end-column="3" />
+            <state relative-caret-position="608">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1136,11 +1112,11 @@
       <recent name="io.renren.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\3c\IdeaProjects\renren-security-master\doc" />
       <recent name="C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\resources\io\renren\dao" />
       <recent name="C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\webapp\WEB-INF\page\xx" />
       <recent name="C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\webapp\WEB-INF\page\yl" />
       <recent name="C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\webapp\js\yl" />
-      <recent name="C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1621,7 +1597,7 @@
       <workItem from="1499858297593" duration="75000" />
       <workItem from="1499907534452" duration="22729000" />
       <workItem from="1499995889498" duration="21067000" />
-      <workItem from="1500251533750" duration="12504000" />
+      <workItem from="1500251533750" duration="13804000" />
     </task>
     <task id="LOCAL-00001" summary="增加相关查询的sql语句">
       <created>1499909532925</created>
@@ -1641,7 +1617,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124652000" />
+    <option name="totallyTimeSpent" value="125952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1674,7 +1650,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18162948" sideWeight="0.49893954" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18162948" sideWeight="0.49893954" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17815483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1720,13 +1696,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/renren-schedule/src/main/resources/io/renren/dao/ScheduleJobDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/renren-web/src/main/webapp/statics/plugins/ztree/jquery.ztree.all.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -2186,13 +2155,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/renren-web/src/main/resources/io/renren/dao/XxLocationDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="1568">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
             <marker date="1500281888053" expanded="true" signature="278:320" ph="select * fro... xx_location" />
             <marker date="1500281888053" expanded="true" signature="1046:1141" ph="insert into xx_location... " />
             <marker date="1500281888053" expanded="true" signature="1229:1337" ph="update xx_lo... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/renren-security.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

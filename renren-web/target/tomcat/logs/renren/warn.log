@@ -6,3 +6,5 @@
 [WARN][2017-07-17 09:03:28] org.apache.velocity.tools.view.XMLToolboxManager.<init>(XMLToolboxManager.java:100) XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
 [WARN][2017-07-17 09:03:28] org.apache.velocity.tools.view.servlet.ServletToolboxManager.<init>(ServletToolboxManager.java:131) ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
 [ERROR][2017-07-17 09:19:04] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'xx/location.html' in any resource loader. 
+[WARN][2017-07-17 16:25:58] org.apache.velocity.tools.view.XMLToolboxManager.<init>(XMLToolboxManager.java:100) XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
+[WARN][2017-07-17 16:25:58] org.apache.velocity.tools.view.servlet.ServletToolboxManager.<init>(ServletToolboxManager.java:131) ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
