@@ -14,7 +14,6 @@ C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\r
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\dao\SysLogDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\Constant.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\SpringContextUtils.java
-C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\service\impl\SysLocationServiceImpl.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\IPUtils.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\validator\ValidatorUtils.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\entity\SysConfigEntity.java
@@ -24,7 +23,6 @@ C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\r
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\validator\group\Group.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\entity\SysLogEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\PageUtils.java
-C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\dao\SysLocationDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\dao\SysConfigDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\R.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\oss\QiniuCloudStorageService.java
@@ -35,9 +33,7 @@ C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\r
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\validator\group\AddGroup.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\validator\group\UpdateGroup.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\xss\XssHttpServletRequestWrapper.java
-C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\entity\SysLocationEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\xss\SQLFilter.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\RRExceptionHandler.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\utils\HttpContextUtils.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\service\SysConfigService.java
-C:\Users\3c\IdeaProjects\renren-security-master\renren-common\src\main\java\io\renren\service\SysLocationService.java

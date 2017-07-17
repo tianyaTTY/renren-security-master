@@ -20,7 +20,6 @@ io\renren\dao\SysConfigDao.class
 io\renren\oss\CloudStorageConfig.class
 io\renren\utils\ConfigConstant.class
 io\renren\oss\QcloudCloudStorageService.class
-io\renren\entity\SysLocationEntity.class
 io\renren\oss\AliyunCloudStorageService.class
 io\renren\utils\R.class
 io\renren\utils\RRException.class
@@ -32,16 +31,13 @@ io\renren\utils\IPUtils.class
 io\renren\validator\group\QcloudGroup.class
 io\renren\utils\DateUtils.class
 io\renren\validator\group\AliyunGroup.class
-io\renren\service\impl\SysLocationServiceImpl.class
 io\renren\utils\Constant$MenuType.class
 io\renren\oss\CloudStorageService.class
 io\renren\oss\OSSFactory.class
 io\renren\xss\XssHttpServletRequestWrapper.class
-io\renren\service\SysLocationService.class
 io\renren\service\SysConfigService.class
 io\renren\utils\Constant$ScheduleStatus.class
 io\renren\xss\SQLFilter.class
 io\renren\dao\BaseDao.class
-io\renren\dao\SysLocationDao.class
 io\renren\utils\PageUtils.class
 io\renren\validator\Assert.class

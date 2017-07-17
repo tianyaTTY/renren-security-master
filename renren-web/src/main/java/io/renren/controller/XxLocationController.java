@@ -1,8 +1,7 @@
 package io.renren.controller;
 
-import io.renren.entity.SysLocationEntity;
-import io.renren.entity.SysLogEntity;
-import io.renren.service.SysLocationService;
+import io.renren.entity.XxLocationEntity;
+import io.renren.service.XxLocationService;
 import io.renren.utils.PageUtils;
 import io.renren.utils.Query;
 import io.renren.utils.R;
@@ -18,31 +17,31 @@ import java.util.Map;
 
 
 /**
- * 系统日志
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-08 10:40:56
+ * 位置信息
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月11日 下午6:43:36
  */
 @Controller
-@RequestMapping("/sys/location")
-public class SysLocationController {
+@RequestMapping("/xx/location")
+public class XxLocationController {
 	@Autowired
-	private SysLocationService sysLocationService;
+	private XxLocationService xxLocationService;
 	
 	/**
 	 * 列表
 	 */
 	@ResponseBody
 	@RequestMapping("/list")
-	@RequiresPermissions("sys:location:list")
+	@RequiresPermissions("xx:location:list")
 	public R list(@RequestParam Map<String, Object> params){
 		//查询列表数据
 		Query query = new Query(params);
-		List<SysLocationEntity> sysLocationList = sysLocationService.queryList(query);
-		int total = sysLocationService.queryTotal(query);
+		List<XxLocationEntity> locationList = xxLocationService.queryList(query);
+		int total = xxLocationService.queryTotal(query);
 		
-		PageUtils pageUtil = new PageUtils(sysLocationList, total, query.getLimit(), query.getPage());
+		PageUtils pageUtil = new PageUtils(locationList, total, query.getLimit(), query.getPage());
 		
 		return R.ok().put("page", pageUtil);
 	}
