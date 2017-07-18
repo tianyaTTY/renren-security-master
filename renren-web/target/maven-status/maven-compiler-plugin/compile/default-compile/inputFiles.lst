@@ -1,5 +1,6 @@
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\dao\YlOrganizationDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\SysPageController.java
+C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\impl\XxLocationServiceImpl.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\YlSpecialistController.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\entity\YlOrganizationEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\YlOrganizationService.java
@@ -9,9 +10,9 @@ C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renr
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\YlOrganizationController.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\impl\YlOrganizationServiceImpl.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\YlHospitalController.java
+C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\XxLocationController.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\entity\YlHospitalEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\SysLogController.java
-C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\SysLocationController.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\SysOssService.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\entity\SysOssEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\task\TestTask.java
@@ -21,8 +22,11 @@ C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renr
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\aop\SysLogAspect.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\YlDepartmentController.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\controller\SysConfigController.java
+C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\dao\XxLocationDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\YlHospitalService.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\entity\YlSpecialistEntity.java
+C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\XxLocationService.java
+C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\entity\XxLocationEntity.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\service\impl\YlSpecialistServiceImpl.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\dao\SysOssDao.java
 C:\Users\3c\IdeaProjects\renren-security-master\renren-web\src\main\java\io\renren\dao\YlSpecialistDao.java

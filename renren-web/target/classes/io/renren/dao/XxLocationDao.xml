@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="io.renren.dao.XxLocationDao">
+	<select id="queryObject" resultType="io.renren.entity.XxLocationEntity">
+		select * from xx_location where id = #{id}
+	</select>
+	
+	<select id="queryList" parameterType="map" resultType="io.renren.entity.XxLocationEntity">
+		select * from xx_location l
+		<where>
+			<if test="name != null and name.trim() != ''">
+				l.name like concat('%',#{name},'%')
+			</if>
+			<if test="catelogy != null">
+				l.catelogy = #{category}
+			</if>
+		</where>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+	<select id="queryTotal" parameterType="map" resultType="int">
+		select count(*) from xx_location
+		<where>
+			<if test="name != null and name.trim() != ''">
+				`name` like concat('%',#{name},'%')
+			</if>
+		</where>
+	</select>
+	
+	<insert id="save" parameterType="io.renren.entity.XxLocationEntity">
+		insert into xx_location(`name`,`hospitalId`, remark)
+			values(#{name},#{hospitalId},#{remark})
+	</insert>
+	
+	<update id="update" parameterType="io.renren.entity.XxLocationEntity">
+		update xx_location set `name` = #{name}, hospitalId = #{hospitalId}, remark = #{remark}
+			 where id = #{id}
+	</update>
+
+	<delete id="deleteBatch" parameterType="int">
+		delete from xx_location where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+	
+	
+</mapper>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>医院信息管理</title>
+#parse("sys/header.html")
+</head>
+<body>
+<div id="rrapp" v-cloak>
+	<div v-show="showList">
+		<div class="grid-btn">
+			<div class="form-group col-sm-2">
+				<input type="text" class="form-control" v-model="q.name" @keyup.enter="query" placeholder="医院名">
+			</div>
+			<a class="btn btn-default" @click="query">查询</a>
+			
+			<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			<a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			<a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+		</div>
+	    <table id="jqGrid"></table>
+	    <div id="jqGridPager"></div>
+    </div>
+     
+   	<div v-show="!showList" class="panel panel-default">
+		<div class="panel-heading">{{title}}</div>
+		<form class="form-horizontal">
+			<div class="form-group">
+			   	<div class="col-sm-2 control-label">医院名称</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="hospital.name" placeholder="医院名称"/>
+			    </div>
+			</div>
+			<div class="form-group">
+			   	<div class="col-sm-2 control-label">医院负责人</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="hospital.principal" placeholder="医院负责人"/>
+			    </div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">医院地址</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="hospital.address" placeholder="医院地址"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">业务范围</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="hospital.businessScope" placeholder="业务范围"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">电话</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="hospital.phone" placeholder="电话"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">手机号</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="hospital.mobile" placeholder="手机号"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">医疗组织</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="ylTree.name" @click="menuTree" placeholder="医疗组织"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">备注</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="hospital.remark" placeholder="备注"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label"></div> 
+				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<!-- 选择菜单 -->
+<div id="menuLayer" style="display: none;padding:10px;">
+	<ul id="menuTree" class="ztree"></ul>
+</div>
+
+<script src="${rc.contextPath}/js/yl/hospital.js?_${date.systemTime}"></script>
+</body>
+</html>

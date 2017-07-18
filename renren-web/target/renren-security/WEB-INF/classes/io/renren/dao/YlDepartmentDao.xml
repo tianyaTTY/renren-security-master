@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="io.renren.dao.YlDepartmentDao">
+	<select id="queryObject" resultType="io.renren.entity.YlDepartmentEntity">
+		select * from yl_department where id = #{id}
+	</select>
+	
+	<select id="queryList" parameterType="map" resultType="io.renren.entity.YlDepartmentEntity">
+		select d.*,h.name AS hosName,o.name AS orgName from yl_department d LEFT JOIN yl_hospital h ON d.hospitalId=h.id LEFT JOIN yl_organization o ON h.orgId=o.id
+		<where>
+			<if test="name != null and name.trim() != ''">
+				d.name like concat('%',#{name},'%')
+			</if>
+		</where>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+	<select id="queryTotal" parameterType="map" resultType="int">
+		select count(*) from yl_department
+		<where>
+			<if test="name != null and name.trim() != ''">
+				`name` like concat('%',#{name},'%')
+			</if>
+		</where>
+	</select>
+	
+	<insert id="save" parameterType="io.renren.entity.YlDepartmentEntity">
+		insert into yl_department(`name`,`hospitalId`, remark)
+			values(#{name},#{hospitalId},#{remark})
+	</insert>
+	
+	<update id="update" parameterType="io.renren.entity.YlDepartmentEntity">
+		update yl_department set `name` = #{name}, hospitalId = #{hospitalId}, remark = #{remark}
+			 where id = #{id}
+	</update>
+
+	<delete id="deleteBatch" parameterType="int">
+		delete from yl_department where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+	
+	
+</mapper>
