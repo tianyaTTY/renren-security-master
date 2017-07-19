@@ -1,0 +1,23 @@
+[2017-07-18 12:20:45] slow sql 1018 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'RenrenScheduler' AND INSTANCE_NAME = ?[1500351644262,"3c-PC1500347155594"] 
+[2017-07-18 16:30:04] slow sql 1780 millis. insert into schedule_job_log
+		(
+			`job_id`, 
+			`bean_name`, 
+			`method_name`, 
+			`params`, 
+			`status`, 
+			`error`, 
+			`times`, 
+			`create_time`
+		)
+		values
+		(
+			?, 
+			?, 
+			?, 
+			?, 
+			?, 
+			?, 
+			?, 
+			?
+		)[1,"testTask","test","renren",0,null,1634,"2017-07-18 16:30:00"] 
