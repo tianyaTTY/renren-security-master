@@ -9,19 +9,21 @@ map.enableScrollWheelZoom();                            //启用滚轮放大缩�
 map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
 
 //加载数据库中保存的数据
-$.ajax({
-    url:'../xx/location/select',
-    data: {"category":1},
-    type:"get",
-    success:function(json){
-        alert(json);
-        for(var i=0;i<json.length;i++){
-            addMarker(json[i].id,json[i].name, json[i].address,json[i].contact,json[i].longitude,json[i].latitude);
+$(function () {
+    $.ajax({
+        url:"../xx/location/select",
+        data: {"category":1},
+        type:"post",
+        success:function(data){
+            alert(data.locationList);
+            for(var i=0;i<data.length;i++){
+                addMarker(data[i].id,data[i].name, data[i].address,data[i].contact,data[i].longitude,data[i].latitude);
+            }
+        },
+        error: function(data){
+            alert("查询幼儿园失败！");
         }
-    },
-    error: function(json){
-        alert("查询幼儿园失败！");
-    }
+    });
 });
 
 function addMarker(id,name,address,contact,longitude,latitude) {
@@ -70,8 +72,7 @@ function openInfo(content,e){
     map.openInfoWindow(infoWindow,point); //开启信息窗口
 }
 
-/*
-$(function () {
+/*$(function () {
     $("#jqGrid").jqGrid({
         url: '../xx/location/list',
         datatype: "json",

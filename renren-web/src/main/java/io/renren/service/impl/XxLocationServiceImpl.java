@@ -1,11 +1,8 @@
 package io.renren.service.impl;
 
 import io.renren.dao.XxLocationDao;
-import io.renren.dao.YlDepartmentDao;
 import io.renren.entity.XxLocationEntity;
-import io.renren.entity.YlDepartmentEntity;
 import io.renren.service.XxLocationService;
-import io.renren.service.YlDepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -51,9 +51,9 @@ public class XxLocationController {
 	 */
 	@RequestMapping("/select")
 	@RequiresPermissions("xx:location:select")
-	public R select(@RequestParam Map<String, Object> params){
+	public List select(@RequestParam Map<String, Object> params){
 		//查询位置列表列表
 		List<XxLocationEntity> locationList = xxLocationService.queryList(null);
-		return R.ok().put("locationList", locationList);
+		return locationList;
 	}
 }

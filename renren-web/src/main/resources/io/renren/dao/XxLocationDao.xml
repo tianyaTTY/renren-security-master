@@ -11,9 +11,6 @@
 			<if test="name != null and name.trim() != ''">
 				l.name like concat('%',#{name},'%')
 			</if>
-			<if test="catelogy != null">
-				l.catelogy = #{category}
-			</if>
 		</where>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
