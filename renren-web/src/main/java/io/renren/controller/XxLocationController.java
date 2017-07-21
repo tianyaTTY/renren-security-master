@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ import java.util.Map;
  * @email tianyaTTY@gmail.com
  * @date 2017年7月11日 下午6:43:36
  */
-@Controller
+@RestController
 @RequestMapping("/xx/location")
 public class XxLocationController {
 	@Autowired
@@ -53,7 +54,7 @@ public class XxLocationController {
 	@RequiresPermissions("xx:location:select")
 	public List select(@RequestParam Map<String, Object> params){
 		//查询位置列表列表
-		List<XxLocationEntity> locationList = xxLocationService.queryList(null);
+		List<XxLocationEntity> locationList = xxLocationService.queryList(params);
 		return locationList;
 	}
 }
