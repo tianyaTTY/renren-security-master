@@ -1,13 +1,11 @@
 package io.renren.controller;
 
+import io.renren.annotation.SysLog;
 import io.renren.entity.XxLocationEntity;
 import io.renren.service.XxLocationService;
-import io.renren.utils.PageUtils;
-import io.renren.utils.Query;
-import io.renren.utils.R;
+import io.renren.utils.*;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -56,5 +54,45 @@ public class XxLocationController {
 		//查询位置列表列表
 		List<XxLocationEntity> locationList = xxLocationService.queryList(params);
 		return locationList;
+	}
+
+	/**
+	 * 保存位置信息
+	 */
+	@SysLog("新增位置信息")
+	@RequestMapping("/save")
+	@RequiresPermissions("xx:location:save")
+	public R save(@RequestParam Map<String, Object> params){
+		//初始化location对象
+		XxLocationEntity location = new XxLocationEntity();
+		location.setName(StringUtils.parseString(params.get("name")));
+		location.setAddress(StringUtils.parseString(params.get("address")));
+		location.setContact(StringUtils.parseString(params.get("contact")));
+		location.setCategory(1);
+		location.setLatitude(StringUtils.parseString(params.get("latitude")));
+		location.setLongitude(StringUtils.parseString(params.get("longitude")));
+		xxLocationService.save(location);
+		return R.ok();
+	}
+
+	/**
+	 * 修改位置信息
+	 */
+	@SysLog("修改位置信息")
+	@RequestMapping("/update")
+	@RequiresPermissions("xx:location:update")
+	public R update(@RequestParam Map<String, Object> params){
+		//初始化location对象
+		XxLocationEntity location = new XxLocationEntity();
+		location.setId(StringUtils.parseInteger(params.get("id")));
+		location.setName(StringUtils.parseString(params.get("name")));
+		location.setAddress(StringUtils.parseString(params.get("address")));
+		location.setContact(StringUtils.parseString(params.get("contact")));
+		location.setCategory(StringUtils.parseInteger(params.get("category")));
+		location.setLatitude(StringUtils.parseString(params.get("latitude")));
+		location.setLongitude(StringUtils.parseString(params.get("longitude")));
+		location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("updateDate"))));
+		xxLocationService.update(location);
+		return R.ok();
 	}
 }

@@ -1,5 +1,6 @@
 package io.renren.utils;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -26,5 +27,21 @@ public class DateUtils {
             return df.format(date);
         }
         return null;
+    }
+
+    public static Date strToDate(String dateStr){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = format.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    public static void main(String[] args) {
+        Date date = strToDate("2017-7-9");
+        System.out.println(strToDate("2017-7-9"));
     }
 }

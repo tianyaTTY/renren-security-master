@@ -30,12 +30,12 @@
 	</select>
 	
 	<insert id="save" parameterType="io.renren.entity.XxLocationEntity">
-		insert into xx_location(`name`,`hospitalId`, remark)
-			values(#{name},#{hospitalId},#{remark})
+		insert into xx_location(`name`,`address`, `contact`, `longitude`, `latitude`)
+			values(#{name},#{address},contact = #{contact},#{longitude},latitude = #{latitude})
 	</insert>
 	
 	<update id="update" parameterType="io.renren.entity.XxLocationEntity">
-		update xx_location set `name` = #{name}, hospitalId = #{hospitalId}, remark = #{remark}
+		update xx_location set `name` = #{name}, address = #{address}, contact = #{contact}, longitude = #{longitude}, latitude = #{latitude}, updateDate = #{updateDate}
 			 where id = #{id}
 	</update>
 

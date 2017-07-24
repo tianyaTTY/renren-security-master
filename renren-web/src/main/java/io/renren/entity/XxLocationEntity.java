@@ -25,7 +25,7 @@ public class XxLocationEntity {
 	private String author;//作者
 	private Date createDate;//创建时间
 	private Date updateDate;//更新时间
-	private Integer catelogy;//类目
+	private Integer category;//类目
 	private String longitude;//经度
 	private String latitude;//纬度
 	private String remark;//备注
@@ -110,12 +110,12 @@ public class XxLocationEntity {
 		this.updateDate = updateDate;
 	}
 
-	public Integer getCatelogy() {
-		return catelogy;
+	public Integer getCategory() {
+		return category;
 	}
 
-	public void setCatelogy(Integer catelogy) {
-		this.catelogy = catelogy;
+	public void setCategory(Integer category) {
+		this.category = category;
 	}
 
 	public String getLongitude() {
