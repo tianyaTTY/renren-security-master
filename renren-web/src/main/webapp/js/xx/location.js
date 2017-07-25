@@ -28,7 +28,7 @@ function addMarker(id,name,address,contact,longitude,latitude,category,createDat
     var p = new BMap.Point(longitude,latitude);
     var marker = new BMap.Marker(p);//创建一个标准
     map.addOverlay(marker);//将标注增加到地图
-    //marker.enableDragging();//设置标注可移动
+    marker.enableDragging();//设置标注可移动
     var img;
     switch (category){
         case 1:
@@ -69,6 +69,7 @@ function addClickHandler(marker,id,name,address,contact,longitude,latitude,creat
                 "联系方式：<input type='text' id='contact' name='contact' value="+contact+"><br/><br/>"+
                 "经    度：<input type='text' id='longitude' name='longitude' value="+longitude+"><br/><br/>"+
                 "纬    度：<input type='text' id='latitude' name='latitude' value="+latitude+"><br/><br/>"+
+                "<input type='hidden' name='lng' id='lng' value="+e.point.lng+"><input type='hidden' name='lat' id='lat' value="+e.point.lat+">"+
                 "<button onclick='saveOrUpdate()'>确定</button><button onclick='cancel()'>取消</button>";
         openInfo(content,e);//调用绘制
     });
@@ -87,15 +88,20 @@ function saveOrUpdate() {
         regTel : /^0[\d]{2,3}-[\d]{7,8}$/
     }
     var tflag = regBox.regTel.test($("#contact").val());
-    if (!tflag){
-        alert("联系电话格式不对，请重新输入！");
-        $("#contact").focus();
-    }
-    /*if ($("#id").val()==null){
-        save();
+    if (tflag){
+        if ($("#id").val()==null){
+            save();
+        }else{
+            update();
+        }
     }else{
-        update();
-    }*/
+        var msg;
+        if(!tflag){
+            msg = "联系电话格式不对，请重新输入！";
+        }
+        alert(msg);
+    }
+
 }
 function save() {
     var url = "../xx/location/save";

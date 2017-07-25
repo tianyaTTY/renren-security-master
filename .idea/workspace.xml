@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab326fd-a534-4a78-8233-19c270260fbe" name="Default" comment="增加相关查询的sql语句">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/img/eryuan.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/img/fandian.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/img/jiudian.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/img/shouyi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/img/zhengfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/js/xx/location.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-25" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/info.log.2017-07-24" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/warn.log.2017-07-24" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/page/sys/location.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security.war" afterPath="$PROJECT_DIR$/renren-web/target/renren-security.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/controller/XxLocationController.class" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/controller/XxLocationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/entity/XxLocationEntity.class" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/entity/XxLocationEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/service/impl/XxLocationServiceImpl.class" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/service/impl/XxLocationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/lib/renren-common-2.1.0.jar" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/lib/renren-common-2.1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/src/main/webapp/js/xx/location.js" afterPath="$PROJECT_DIR$/renren-web/src/main/webapp/js/xx/location.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/dao/XxLocationDao.xml" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/classes/io/renren/dao/XxLocationDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/page/xx/location.html" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/WEB-INF/page/xx/location.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/renren-security/js/yl/organization.js" afterPath="$PROJECT_DIR$/renren-web/target/renren-security/js/yl/organization.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-24" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/access_log.2017-07-24" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/info.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/warn.log" afterPath="$PROJECT_DIR$/renren-web/target/tomcat/logs/renren/warn.log" />
     </list>
     <ignored path="$PROJECT_DIR$/renren-common/target/" />
     <ignored path="$PROJECT_DIR$/renren-web/target/" />
@@ -50,11 +27,11 @@
       <file leaf-file-name="location.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/renren-web/src/main/webapp/js/xx/location.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+            <state relative-caret-position="1476">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
               <folding>
-                <marker date="1500974187270" expanded="true" signature="2194:2212" ph="..." />
-                <marker date="1500974187270" expanded="true" signature="2295:2411" ph="..." />
+                <marker date="1500983516038" expanded="true" signature="2192:2210" ph="..." />
+                <marker date="1500983516038" expanded="true" signature="2293:2409" ph="..." />
               </folding>
             </state>
           </provider>
@@ -319,9 +296,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1065" />
-    <option name="y" value="4" />
-    <option name="width" value="2805" />
+    <option name="x" value="1048" />
+    <option name="y" value="2" />
+    <option name="width" value="2802" />
     <option name="height" value="2126" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1546,7 +1523,7 @@
       <workItem from="1500944439546" duration="1356000" />
       <workItem from="1500946945652" duration="1568000" />
       <workItem from="1500949306077" duration="7418000" />
-      <workItem from="1500965781287" duration="8172000" />
+      <workItem from="1500965781287" duration="16783000" />
     </task>
     <task id="LOCAL-00001" summary="增加相关查询的sql语句">
       <created>1499909532925</created>
@@ -1566,7 +1543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217785000" />
+    <option name="totallyTimeSpent" value="226396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1578,7 +1555,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1065" y="4" width="2805" height="2126" extended-state="0" />
+    <frame x="1048" y="2" width="2802" height="2126" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1603,7 +1580,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10638298" sideWeight="0.49893954" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16464089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16482301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2049,11 +2026,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/renren-web/src/main/webapp/js/xx/location.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+        <state relative-caret-position="1476">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
-            <marker date="1500974187270" expanded="true" signature="2194:2212" ph="..." />
-            <marker date="1500974187270" expanded="true" signature="2295:2411" ph="..." />
+            <marker date="1500983516038" expanded="true" signature="2192:2210" ph="..." />
+            <marker date="1500983516038" expanded="true" signature="2293:2409" ph="..." />
           </folding>
         </state>
       </provider>
