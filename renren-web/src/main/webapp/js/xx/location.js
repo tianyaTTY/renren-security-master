@@ -80,11 +80,22 @@ function openInfo(content,e){
     map.openInfoWindow(infoWindow,point); //开启信息窗口
 }
 function saveOrUpdate() {
-    if ($("#id").val()==null){
+    var regBox = {
+        regEmail : /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,//邮箱
+        regName : /^[a-z0-9_-]{3,16}$/,//用户名
+        regMobile : /^0?1[3|4|5|8][0-9]\d{8}$/,//手机
+        regTel : /^0[\d]{2,3}-[\d]{7,8}$/
+    }
+    var tflag = regBox.regTel.test($("#contact").val());
+    if (!tflag){
+        alert("联系电话格式不对，请重新输入！");
+        $("#contact").focus();
+    }
+    /*if ($("#id").val()==null){
         save();
     }else{
         update();
-    }
+    }*/
 }
 function save() {
     var url = "../xx/location/save";
