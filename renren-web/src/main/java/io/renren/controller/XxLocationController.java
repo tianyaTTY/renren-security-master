@@ -63,15 +63,22 @@ public class XxLocationController {
 	@RequestMapping("/save")
 	@RequiresPermissions("xx:location:save")
 	public R save(@RequestParam Map<String, Object> params){
-		//初始化location对象
-		XxLocationEntity location = new XxLocationEntity();
-		location.setName(StringUtils.parseString(params.get("name")));
-		location.setAddress(StringUtils.parseString(params.get("address")));
-		location.setContact(StringUtils.parseString(params.get("contact")));
-		location.setCategory(1);
-		location.setLatitude(StringUtils.parseString(params.get("latitude")));
-		location.setLongitude(StringUtils.parseString(params.get("longitude")));
-		xxLocationService.save(location);
+		try{
+			//初始化location对象
+			XxLocationEntity location = new XxLocationEntity();
+			location.setName(StringUtils.parseString(params.get("name")));
+			location.setAddress(StringUtils.parseString(params.get("address")));
+			location.setContact(StringUtils.parseString(params.get("contact")));
+			location.setPhone(StringUtils.parseString(params.get("phone")));
+			location.setCategory(StringUtils.parseInteger(params.get("category")));
+			location.setLatitude(StringUtils.parseString(params.get("latitude")));
+			location.setLongitude(StringUtils.parseString(params.get("longitude")));
+			location.setCreateDate(DateUtils.strToDate(StringUtils.parseString(params.get("createDate"))));
+			location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("createDate"))));
+			xxLocationService.save(location);
+		}catch (Exception e){
+			R.error();
+		}
 		return R.ok();
 	}
 
@@ -82,17 +89,39 @@ public class XxLocationController {
 	@RequestMapping("/update")
 	@RequiresPermissions("xx:location:update")
 	public R update(@RequestParam Map<String, Object> params){
-		//初始化location对象
-		XxLocationEntity location = new XxLocationEntity();
-		location.setId(StringUtils.parseInteger(params.get("id")));
-		location.setName(StringUtils.parseString(params.get("name")));
-		location.setAddress(StringUtils.parseString(params.get("address")));
-		location.setContact(StringUtils.parseString(params.get("contact")));
-		location.setCategory(StringUtils.parseInteger(params.get("category")));
-		location.setLatitude(StringUtils.parseString(params.get("latitude")));
-		location.setLongitude(StringUtils.parseString(params.get("longitude")));
-		location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("updateDate"))));
-		xxLocationService.update(location);
+		try {
+			//初始化location对象
+			XxLocationEntity location = new XxLocationEntity();
+			location.setId(StringUtils.parseInteger(params.get("id")));
+			location.setName(StringUtils.parseString(params.get("name")));
+			location.setAddress(StringUtils.parseString(params.get("address")));
+			location.setContact(StringUtils.parseString(params.get("contact")));
+			location.setPhone(StringUtils.parseString(params.get("phone")));
+			location.setCategory(StringUtils.parseInteger(params.get("category")));
+			location.setLatitude(StringUtils.parseString(params.get("latitude")));
+			location.setLongitude(StringUtils.parseString(params.get("longitude")));
+			location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("updateDate"))));
+			xxLocationService.update(location);
+		}catch (Exception e){
+			R.error();
+		}
+		return R.ok();
+	}
+
+	/**
+	 * 删除位置信息
+	 */
+	@SysLog("删除位置信息")
+	@RequestMapping("/delete")
+	@RequiresPermissions("xx:location:delete")
+	public R delete(@RequestParam Map<String, Object> params){
+		try {
+			Integer id = StringUtils.parseInteger(params.get("id"));
+			Integer[] ids = new Integer[]{id};
+			xxLocationService.deleteBatch(ids);
+		}catch (Exception e){
+			R.error();
+		}
 		return R.ok();
 	}
 }
