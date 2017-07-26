@@ -1303,3 +1303,4 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExce
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
 	... 110 more
 [ERROR][2017-07-26 13:07:39] com.alibaba.druid.filter.stat.StatFilter.internalAfterStatementExecute(StatFilter.java:465) slow sql 1111 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'RenrenScheduler' AND INSTANCE_NAME = ?[1501045658190,"3c-PC1501037013813"] 
+[ERROR][2017-07-26 20:26:02] org.apache.velocity.runtime.log.CommonsLogLogChute.log(CommonsLogLogChute.java:96) ResourceManager : unable to find resource 'xx/info.html' in any resource loader. 

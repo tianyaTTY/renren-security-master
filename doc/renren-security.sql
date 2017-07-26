@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-07-17 17:19:15
+Date: 2017-07-26 19:56:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -170,7 +170,7 @@ CREATE TABLE `qrtz_scheduler_state` (
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('RenrenScheduler', '3c-PC1500279946470', '1500283100059', '15000');
+INSERT INTO `qrtz_scheduler_state` VALUES ('RenrenScheduler', '3c-PC1501069512450', '1501070176138', '15000');
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -258,7 +258,7 @@ CREATE TABLE `qrtz_triggers` (
 -- ----------------------------
 -- Records of qrtz_triggers
 -- ----------------------------
-INSERT INTO `qrtz_triggers` VALUES ('RenrenScheduler', 'TASK_1', 'DEFAULT', 'TASK_1', 'DEFAULT', null, '1500283800000', '1500282000000', '5', 'WAITING', 'CRON', '1499655202000', '0', null, '2', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000D4A4F425F504152414D5F4B455973720022696F2E72656E72656E2E656E746974792E5363686564756C654A6F62456E7469747900000000000000010200084C00086265616E4E616D657400124C6A6176612F6C616E672F537472696E673B4C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C000E63726F6E45787072657373696F6E71007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C000A6D6574686F644E616D6571007E00094C0006706172616D7371007E00094C000672656D61726B71007E00094C00067374617475737400134C6A6176612F6C616E672F496E74656765723B7870740008746573745461736B7372000E6A6176612E7574696C2E44617465686A81014B5974190300007870770800000158BAF593307874000E3020302F3330202A202A202A203F7372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000017400047465737474000672656E72656E74000FE69C89E58F82E695B0E6B58BE8AF95737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C75657871007E0013000000007800);
+INSERT INTO `qrtz_triggers` VALUES ('RenrenScheduler', 'TASK_1', 'DEFAULT', 'TASK_1', 'DEFAULT', null, '1501070400000', '-1', '5', 'WAITING', 'CRON', '1499655202000', '0', null, '2', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000D4A4F425F504152414D5F4B455973720022696F2E72656E72656E2E656E746974792E5363686564756C654A6F62456E7469747900000000000000010200084C00086265616E4E616D657400124C6A6176612F6C616E672F537472696E673B4C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C000E63726F6E45787072657373696F6E71007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C000A6D6574686F644E616D6571007E00094C0006706172616D7371007E00094C000672656D61726B71007E00094C00067374617475737400134C6A6176612F6C616E672F496E74656765723B7870740008746573745461736B7372000E6A6176612E7574696C2E44617465686A81014B5974190300007870770800000158BAF593307874000E3020302F3330202A202A202A203F7372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000017400047465737474000672656E72656E74000FE69C89E58F82E695B0E6B58BE8AF95737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C75657871007E0013000000007800);
 INSERT INTO `qrtz_triggers` VALUES ('RenrenScheduler', 'TASK_2', 'DEFAULT', 'TASK_2', 'DEFAULT', null, '1499655600000', '-1', '5', 'PAUSED', 'CRON', '1499655202000', '0', null, '2', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000D4A4F425F504152414D5F4B455973720022696F2E72656E72656E2E656E746974792E5363686564756C654A6F62456E7469747900000000000000010200084C00086265616E4E616D657400124C6A6176612F6C616E672F537472696E673B4C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C000E63726F6E45787072657373696F6E71007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C000A6D6574686F644E616D6571007E00094C0006706172616D7371007E00094C000672656D61726B71007E00094C00067374617475737400134C6A6176612F6C616E672F496E74656765723B7870740008746573745461736B7372000E6A6176612E7574696C2E44617465686A81014B5974190300007870770800000158C377C4607874000E3020302F3330202A202A202A203F7372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000000000274000574657374327074000FE697A0E58F82E695B0E6B58BE8AF95737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C75657871007E0013000000017800);
 
 -- ----------------------------
@@ -299,7 +299,7 @@ CREATE TABLE `schedule_job_log` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`log_id`),
   KEY `job_id` (`job_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COMMENT='定时任务日志';
+) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8 COMMENT='定时任务日志';
 
 -- ----------------------------
 -- Records of schedule_job_log
@@ -374,6 +374,96 @@ INSERT INTO `schedule_job_log` VALUES ('67', '1', 'testTask', 'test', 'renren', 
 INSERT INTO `schedule_job_log` VALUES ('68', '1', 'testTask', 'test', 'renren', '0', null, '1002', '2017-07-17 16:00:00');
 INSERT INTO `schedule_job_log` VALUES ('69', '1', 'testTask', 'test', 'renren', '0', null, '1021', '2017-07-17 16:30:00');
 INSERT INTO `schedule_job_log` VALUES ('70', '1', 'testTask', 'test', 'renren', '0', null, '1025', '2017-07-17 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('71', '1', 'testTask', 'test', 'renren', '0', null, '1015', '2017-07-18 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('72', '1', 'testTask', 'test', 'renren', '0', null, '1017', '2017-07-18 11:30:00');
+INSERT INTO `schedule_job_log` VALUES ('73', '1', 'testTask', 'test', 'renren', '0', null, '1022', '2017-07-18 12:00:00');
+INSERT INTO `schedule_job_log` VALUES ('74', '1', 'testTask', 'test', 'renren', '0', null, '1031', '2017-07-18 12:30:00');
+INSERT INTO `schedule_job_log` VALUES ('75', '1', 'testTask', 'test', 'renren', '0', null, '1127', '2017-07-18 13:00:00');
+INSERT INTO `schedule_job_log` VALUES ('76', '1', 'testTask', 'test', 'renren', '0', null, '1031', '2017-07-18 13:30:00');
+INSERT INTO `schedule_job_log` VALUES ('77', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-18 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('78', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-18 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('79', '1', 'testTask', 'test', 'renren', '0', null, '1002', '2017-07-18 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('80', '1', 'testTask', 'test', 'renren', '0', null, '1002', '2017-07-18 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('81', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-18 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('82', '1', 'testTask', 'test', 'renren', '0', null, '1634', '2017-07-18 16:30:01');
+INSERT INTO `schedule_job_log` VALUES ('83', '1', 'testTask', 'test', 'renren', '0', null, '1002', '2017-07-18 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('84', '1', 'testTask', 'test', 'renren', '0', null, '1034', '2017-07-18 17:30:00');
+INSERT INTO `schedule_job_log` VALUES ('85', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-19 10:00:00');
+INSERT INTO `schedule_job_log` VALUES ('86', '1', 'testTask', 'test', 'renren', '0', null, '1033', '2017-07-19 10:30:00');
+INSERT INTO `schedule_job_log` VALUES ('87', '1', 'testTask', 'test', 'renren', '0', null, '1028', '2017-07-19 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('88', '1', 'testTask', 'test', 'renren', '0', null, '1027', '2017-07-19 11:30:00');
+INSERT INTO `schedule_job_log` VALUES ('89', '1', 'testTask', 'test', 'renren', '0', null, '1048', '2017-07-19 12:00:00');
+INSERT INTO `schedule_job_log` VALUES ('90', '1', 'testTask', 'test', 'renren', '0', null, '1004', '2017-07-19 12:30:00');
+INSERT INTO `schedule_job_log` VALUES ('91', '1', 'testTask', 'test', 'renren', '0', null, '1022', '2017-07-19 13:00:00');
+INSERT INTO `schedule_job_log` VALUES ('92', '1', 'testTask', 'test', 'renren', '0', null, '1019', '2017-07-19 13:30:00');
+INSERT INTO `schedule_job_log` VALUES ('93', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-19 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('94', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-19 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('95', '1', 'testTask', 'test', 'renren', '0', null, '1027', '2017-07-19 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('96', '1', 'testTask', 'test', 'renren', '0', null, '1019', '2017-07-19 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('97', '1', 'testTask', 'test', 'renren', '0', null, '1025', '2017-07-19 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('98', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-19 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('99', '1', 'testTask', 'test', 'renren', '0', null, '1049', '2017-07-19 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('100', '1', 'testTask', 'test', 'renren', '0', null, '1044', '2017-07-19 17:30:00');
+INSERT INTO `schedule_job_log` VALUES ('101', '1', 'testTask', 'test', 'renren', '0', null, '1021', '2017-07-19 18:00:00');
+INSERT INTO `schedule_job_log` VALUES ('102', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-20 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('103', '1', 'testTask', 'test', 'renren', '0', null, '1021', '2017-07-20 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('104', '1', 'testTask', 'test', 'renren', '0', null, '1017', '2017-07-20 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('105', '1', 'testTask', 'test', 'renren', '0', null, '1010', '2017-07-20 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('106', '1', 'testTask', 'test', 'renren', '0', null, '1019', '2017-07-21 09:30:00');
+INSERT INTO `schedule_job_log` VALUES ('107', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-21 10:00:00');
+INSERT INTO `schedule_job_log` VALUES ('108', '1', 'testTask', 'test', 'renren', '0', null, '1003', '2017-07-21 10:30:00');
+INSERT INTO `schedule_job_log` VALUES ('109', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-21 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('110', '1', 'testTask', 'test', 'renren', '0', null, '1024', '2017-07-21 11:30:00');
+INSERT INTO `schedule_job_log` VALUES ('111', '1', 'testTask', 'test', 'renren', '0', null, '1028', '2017-07-21 12:00:00');
+INSERT INTO `schedule_job_log` VALUES ('112', '1', 'testTask', 'test', 'renren', '0', null, '1031', '2017-07-21 12:30:00');
+INSERT INTO `schedule_job_log` VALUES ('113', '1', 'testTask', 'test', 'renren', '0', null, '1028', '2017-07-21 13:00:00');
+INSERT INTO `schedule_job_log` VALUES ('114', '1', 'testTask', 'test', 'renren', '0', null, '1022', '2017-07-21 13:30:00');
+INSERT INTO `schedule_job_log` VALUES ('115', '1', 'testTask', 'test', 'renren', '0', null, '1028', '2017-07-21 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('116', '1', 'testTask', 'test', 'renren', '0', null, '1027', '2017-07-21 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('117', '1', 'testTask', 'test', 'renren', '0', null, '1025', '2017-07-21 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('118', '1', 'testTask', 'test', 'renren', '0', null, '1155', '2017-07-21 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('119', '1', 'testTask', 'test', 'renren', '0', null, '1027', '2017-07-21 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('120', '1', 'testTask', 'test', 'renren', '0', null, '1024', '2017-07-21 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('121', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-24 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('122', '1', 'testTask', 'test', 'renren', '0', null, '1227', '2017-07-24 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('123', '1', 'testTask', 'test', 'renren', '0', null, '1033', '2017-07-24 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('124', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-24 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('125', '1', 'testTask', 'test', 'renren', '0', null, '1138', '2017-07-24 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('126', '1', 'testTask', 'test', 'renren', '0', null, '1039', '2017-07-24 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('127', '1', 'testTask', 'test', 'renren', '0', null, '1033', '2017-07-24 17:30:00');
+INSERT INTO `schedule_job_log` VALUES ('128', '1', 'testTask', 'test', 'renren', '0', null, '1040', '2017-07-25 09:30:00');
+INSERT INTO `schedule_job_log` VALUES ('129', '1', 'testTask', 'test', 'renren', '0', null, '1084', '2017-07-25 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('130', '1', 'testTask', 'test', 'renren', '0', null, '1058', '2017-07-25 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('131', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-25 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('132', '1', 'testTask', 'test', 'renren', '0', null, '1019', '2017-07-25 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('133', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-25 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('134', '1', 'testTask', 'test', 'renren', '0', null, '1049', '2017-07-25 18:00:00');
+INSERT INTO `schedule_job_log` VALUES ('135', '1', 'testTask', 'test', 'renren', '0', null, '1320', '2017-07-25 18:30:00');
+INSERT INTO `schedule_job_log` VALUES ('136', '1', 'testTask', 'test', 'renren', '0', null, '1026', '2017-07-25 19:00:00');
+INSERT INTO `schedule_job_log` VALUES ('137', '1', 'testTask', 'test', 'renren', '0', null, '1018', '2017-07-25 19:30:00');
+INSERT INTO `schedule_job_log` VALUES ('138', '1', 'testTask', 'test', 'renren', '0', null, '1016', '2017-07-25 20:00:00');
+INSERT INTO `schedule_job_log` VALUES ('139', '1', 'testTask', 'test', 'renren', '0', null, '1046', '2017-07-26 09:00:00');
+INSERT INTO `schedule_job_log` VALUES ('140', '1', 'testTask', 'test', 'renren', '0', null, '1014', '2017-07-26 09:30:00');
+INSERT INTO `schedule_job_log` VALUES ('141', '1', 'testTask', 'test', 'renren', '0', null, '1020', '2017-07-26 10:00:00');
+INSERT INTO `schedule_job_log` VALUES ('142', '1', 'testTask', 'test', 'renren', '0', null, '1371', '2017-07-26 10:30:00');
+INSERT INTO `schedule_job_log` VALUES ('143', '1', 'testTask', 'test', 'renren', '0', null, '1047', '2017-07-26 11:00:00');
+INSERT INTO `schedule_job_log` VALUES ('144', '1', 'testTask', 'test', 'renren', '0', null, '1134', '2017-07-26 11:30:00');
+INSERT INTO `schedule_job_log` VALUES ('145', '1', 'testTask', 'test', 'renren', '0', null, '1028', '2017-07-26 12:00:00');
+INSERT INTO `schedule_job_log` VALUES ('146', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-26 12:30:00');
+INSERT INTO `schedule_job_log` VALUES ('147', '1', 'testTask', 'test', 'renren', '0', null, '1021', '2017-07-26 13:00:00');
+INSERT INTO `schedule_job_log` VALUES ('148', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-26 13:30:00');
+INSERT INTO `schedule_job_log` VALUES ('149', '1', 'testTask', 'test', 'renren', '0', null, '1023', '2017-07-26 14:00:00');
+INSERT INTO `schedule_job_log` VALUES ('150', '1', 'testTask', 'test', 'renren', '0', null, '1024', '2017-07-26 14:30:00');
+INSERT INTO `schedule_job_log` VALUES ('151', '1', 'testTask', 'test', 'renren', '0', null, '1046', '2017-07-26 15:00:00');
+INSERT INTO `schedule_job_log` VALUES ('152', '1', 'testTask', 'test', 'renren', '0', null, '1017', '2017-07-26 15:30:00');
+INSERT INTO `schedule_job_log` VALUES ('153', '1', 'testTask', 'test', 'renren', '0', null, '1030', '2017-07-26 16:00:00');
+INSERT INTO `schedule_job_log` VALUES ('154', '1', 'testTask', 'test', 'renren', '0', null, '1016', '2017-07-26 16:30:00');
+INSERT INTO `schedule_job_log` VALUES ('155', '1', 'testTask', 'test', 'renren', '0', null, '1032', '2017-07-26 17:00:00');
+INSERT INTO `schedule_job_log` VALUES ('156', '1', 'testTask', 'test', 'renren', '0', null, '1027', '2017-07-26 17:30:00');
+INSERT INTO `schedule_job_log` VALUES ('157', '1', 'testTask', 'test', 'renren', '0', null, '1019', '2017-07-26 18:00:01');
+INSERT INTO `schedule_job_log` VALUES ('158', '1', 'testTask', 'test', 'renren', '0', null, '1032', '2017-07-26 18:30:00');
+INSERT INTO `schedule_job_log` VALUES ('159', '1', 'testTask', 'test', 'renren', '0', null, '1041', '2017-07-26 19:00:00');
+INSERT INTO `schedule_job_log` VALUES ('160', '1', 'testTask', 'test', 'renren', '0', null, '1066', '2017-07-26 19:30:00');
 
 -- ----------------------------
 -- Table structure for sys_config
@@ -407,7 +497,7 @@ CREATE TABLE `sys_log` (
   `ip` varchar(64) DEFAULT NULL COMMENT 'IP地址',
   `create_date` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='系统日志';
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8 COMMENT='系统日志';
 
 -- ----------------------------
 -- Records of sys_log
@@ -441,6 +531,68 @@ INSERT INTO `sys_log` VALUES ('26', 'admin', '修改菜单', 'io.renren.controll
 INSERT INTO `sys_log` VALUES ('27', 'admin', '保存菜单', 'io.renren.controller.SysMenuController.save()', '{\"icon\":\"fa fa-info-circle\",\"name\":\"信息发布\",\"orderNum\":400,\"parentId\":0,\"parentName\":\"一级菜单\",\"type\":0}', '0:0:0:0:0:0:0:1', '2017-07-14 17:27:01');
 INSERT INTO `sys_log` VALUES ('28', 'admin', '保存菜单', 'io.renren.controller.SysMenuController.save()', '{\"icon\":\"fa fa-map-marker\",\"name\":\"位置管理\",\"orderNum\":401,\"parentId\":39,\"parentName\":\"信息发布\",\"type\":1,\"url\":\"xx/location.html\"}', '0:0:0:0:0:0:0:1', '2017-07-14 17:35:15');
 INSERT INTO `sys_log` VALUES ('29', 'admin', '删除菜单', 'io.renren.controller.SysMenuController.delete()', '[32]', '0:0:0:0:0:0:0:1', '2017-07-17 15:41:56');
+INSERT INTO `sys_log` VALUES ('30', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:08:16');
+INSERT INTO `sys_log` VALUES ('31', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:10:33');
+INSERT INTO `sys_log` VALUES ('32', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:22:39');
+INSERT INTO `sys_log` VALUES ('33', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:25:18');
+INSERT INTO `sys_log` VALUES ('34', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:25:30');
+INSERT INTO `sys_log` VALUES ('35', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:27:30');
+INSERT INTO `sys_log` VALUES ('36', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:30:59');
+INSERT INTO `sys_log` VALUES ('37', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:32:13');
+INSERT INTO `sys_log` VALUES ('38', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:40:49');
+INSERT INTO `sys_log` VALUES ('39', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:41:57');
+INSERT INTO `sys_log` VALUES ('40', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{}', '0:0:0:0:0:0:0:1', '2017-07-24 15:50:29');
+INSERT INTO `sys_log` VALUES ('41', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"18751861827\",\"longitude\":\"107.8\",\"latitude\":\"38.2\"}', '0:0:0:0:0:0:0:1', '2017-07-24 15:52:38');
+INSERT INTO `sys_log` VALUES ('42', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"18751861827\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-24\"}', '0:0:0:0:0:0:0:1', '2017-07-24 16:21:56');
+INSERT INTO `sys_log` VALUES ('43', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"18751861827\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-24\"}', '0:0:0:0:0:0:0:1', '2017-07-24 16:23:14');
+INSERT INTO `sys_log` VALUES ('44', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"18751861827\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-24\"}', '0:0:0:0:0:0:0:1', '2017-07-24 16:24:34');
+INSERT INTO `sys_log` VALUES ('45', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"1\",\"name\":\"重庆\",\"address\":\"重庆市\",\"contact\":\"1111\",\"longitude\":\"107.4\",\"latitude\":\"38\",\"updateDate\":\"2017-7-24\"}', '0:0:0:0:0:0:0:1', '2017-07-24 16:33:21');
+INSERT INTO `sys_log` VALUES ('46', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"1\",\"name\":\"重庆\",\"address\":\"重庆市\",\"contact\":\"1111\",\"longitude\":\"107.4\",\"latitude\":\"38\",\"updateDate\":\"2017-7-24\"}', '0:0:0:0:0:0:0:1', '2017-07-24 17:18:19');
+INSERT INTO `sys_log` VALUES ('47', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"18751861827111\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-25\"}', '0:0:0:0:0:0:0:1', '2017-07-25 16:16:54');
+INSERT INTO `sys_log` VALUES ('48', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-25\"}', '0:0:0:0:0:0:0:1', '2017-07-25 19:21:34');
+INSERT INTO `sys_log` VALUES ('49', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-25\"}', '0:0:0:0:0:0:0:1', '2017-07-25 19:25:24');
+INSERT INTO `sys_log` VALUES ('50', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-25\"}', '0:0:0:0:0:0:0:1', '2017-07-25 19:25:41');
+INSERT INTO `sys_log` VALUES ('51', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.8\",\"latitude\":\"38.2\",\"updateDate\":\"2017-7-25\"}', '0:0:0:0:0:0:0:1', '2017-07-25 19:38:01');
+INSERT INTO `sys_log` VALUES ('52', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"\",\"name\":\"幼儿园1\",\"address\":\"幼儿园1\",\"contact\":\"026-26548975\",\"longitude\":\"107.134855\",\"latitude\":\"38.127866\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:32:04');
+INSERT INTO `sys_log` VALUES ('53', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.323428\",\"latitude\":\"38.096977\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:32:56');
+INSERT INTO `sys_log` VALUES ('54', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"longitude\":\"107.631582\",\"latitude\":\"38.136949\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:33:04');
+INSERT INTO `sys_log` VALUES ('55', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"\",\"name\":\"asda\",\"address\":\"asdasd\",\"contact\":\"025-59876541\",\"longitude\":\"107.301581\",\"latitude\":\"38.267611\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:33:51');
+INSERT INTO `sys_log` VALUES ('56', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"\",\"name\":\"asdlka\",\"address\":\"asdaksd\",\"contact\":\"025-59876548\",\"longitude\":\"107.482104\",\"latitude\":\"38.205939\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:34:54');
+INSERT INTO `sys_log` VALUES ('57', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"\",\"name\":\"asda\",\"address\":\"asdas\",\"contact\":\"025-89654784\",\"longitude\":\"107.483254\",\"latitude\":\"38.196865\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:37:46');
+INSERT INTO `sys_log` VALUES ('58', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"\",\"name\":\"asd\",\"address\":\"asd\",\"contact\":\"025-89754879\",\"longitude\":\"107.485554\",\"latitude\":\"38.19505\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:38:09');
+INSERT INTO `sys_log` VALUES ('59', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"幼儿园1\",\"address\":\"原二院1\",\"contact\":\"025-59876985\",\"longitude\":\"107.490153\",\"latitude\":\"38.19142\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:41:57');
+INSERT INTO `sys_log` VALUES ('60', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"饭店1\",\"address\":\"饭店地址\",\"contact\":\"025-89788578\",\"longitude\":\"107.491303\",\"latitude\":\"38.19505\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:45:04');
+INSERT INTO `sys_log` VALUES ('61', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"酒店1\",\"address\":\"酒店地址\",\"contact\":\"025-59874585\",\"longitude\":\"107.485554\",\"latitude\":\"38.205939\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:50:09');
+INSERT INTO `sys_log` VALUES ('62', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"酒店1\",\"address\":\"酒店地址\",\"contact\":\"025-26514444\",\"longitude\":\"107.483254\",\"latitude\":\"38.202309\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:52:53');
+INSERT INTO `sys_log` VALUES ('63', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"兽医点1\",\"address\":\"兽医点地址\",\"contact\":\"025-88888888\",\"longitude\":\"107.477505\",\"latitude\":\"38.196865\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 09:56:54');
+INSERT INTO `sys_log` VALUES ('64', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"longitude\":\"107.478655\",\"latitude\":\"38.200494\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"2\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:07:42');
+INSERT INTO `sys_log` VALUES ('65', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"3\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"longitude\":\"107.141754\",\"latitude\":\"38.225897\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:08:06');
+INSERT INTO `sys_log` VALUES ('66', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"3\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"longitude\":\"107.569491\",\"latitude\":\"38.022425\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:08:15');
+INSERT INTO `sys_log` VALUES ('67', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.356773\",\"latitude\":\"38.151478\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:37:28');
+INSERT INTO `sys_log` VALUES ('68', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.432661\",\"latitude\":\"38.078801\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:37:38');
+INSERT INTO `sys_log` VALUES ('69', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.448759\",\"latitude\":\"38.086072\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:39:22');
+INSERT INTO `sys_log` VALUES ('70', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.453358\",\"latitude\":\"38.098794\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:40:26');
+INSERT INTO `sys_log` VALUES ('71', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"3\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"phone\":\"025-88888888\",\"longitude\":\"107.570641\",\"latitude\":\"38.03334\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:40:32');
+INSERT INTO `sys_log` VALUES ('72', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.455658\",\"latitude\":\"38.109698\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:43:58');
+INSERT INTO `sys_log` VALUES ('73', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"025-3698547\",\"longitude\":\"107.461407\",\"latitude\":\"38.118782\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:44:24');
+INSERT INTO `sys_log` VALUES ('74', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"\",\"longitude\":\"107.462845\",\"latitude\":\"38.119009\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:49:50');
+INSERT INTO `sys_log` VALUES ('75', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"3\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"phone\":\"\",\"longitude\":\"107.574953\",\"latitude\":\"38.034022\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 10:50:08');
+INSERT INTO `sys_log` VALUES ('76', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"北京\",\"address\":\"北京市\",\"contact\":\"025-3698547\",\"phone\":\"\",\"longitude\":\"107.462845\",\"latitude\":\"38.126731\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 12:19:25');
+INSERT INTO `sys_log` VALUES ('77', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"政府部门2\",\"address\":\"政府部门地址\",\"contact\":\"025-36958698\",\"phone\":\"\",\"longitude\":\"107.501364\",\"latitude\":\"38.13218\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"1\"}', '0:0:0:0:0:0:0:1', '2017-07-26 12:21:45');
+INSERT INTO `sys_log` VALUES ('78', 'admin', '删除位置信息', 'io.renren.controller.XxLocationController.delete()', '{\"id\":\"4\"}', '0:0:0:0:0:0:0:1', '2017-07-26 17:55:55');
+INSERT INTO `sys_log` VALUES ('79', 'admin', '删除位置信息', 'io.renren.controller.XxLocationController.delete()', '{\"id\":\"1\"}', '0:0:0:0:0:0:0:1', '2017-07-26 17:56:10');
+INSERT INTO `sys_log` VALUES ('80', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"幼儿园2\",\"address\":\"幼儿园地址2\",\"contact\":\"\",\"phone\":\"18751861827\",\"longitude\":\"107.484116\",\"latitude\":\"38.196638\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"2\"}', '0:0:0:0:0:0:0:1', '2017-07-26 18:20:30');
+INSERT INTO `sys_log` VALUES ('81', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"5\",\"name\":\"幼儿园2\",\"address\":\"幼儿园地址2\",\"contact\":\"\",\"phone\":\"18751861827\",\"longitude\":\"107.442148\",\"latitude\":\"38.223856\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 18:20:39');
+INSERT INTO `sys_log` VALUES ('82', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"兽医点1\",\"address\":\"兽医点地址1\",\"contact\":\"025-89878987\",\"phone\":\"\",\"longitude\":\"107.38868\",\"latitude\":\"38.183025\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"5\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:34:27');
+INSERT INTO `sys_log` VALUES ('83', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"兽医点2\",\"address\":\"兽医点地址2\",\"contact\":\"026-96966363\",\"phone\":\"\",\"longitude\":\"107.350736\",\"latitude\":\"38.110379\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"5\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:34:53');
+INSERT INTO `sys_log` VALUES ('84', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"酒店1\",\"address\":\"酒店地址1\",\"contact\":\"\",\"phone\":\"18756986987\",\"longitude\":\"107.534709\",\"latitude\":\"38.201175\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"4\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:35:21');
+INSERT INTO `sys_log` VALUES ('85', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"酒店2\",\"address\":\"酒店地址2\",\"contact\":\"\",\"phone\":\"16989657\",\"longitude\":\"107.455371\",\"latitude\":\"38.090388\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"4\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:35:57');
+INSERT INTO `sys_log` VALUES ('86', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"饭店1\",\"address\":\"饭店地址1\",\"contact\":\"023-98787468\",\"phone\":\"\",\"longitude\":\"107.553106\",\"latitude\":\"38.101293\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"3\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:36:39');
+INSERT INTO `sys_log` VALUES ('87', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"饭店2\",\"address\":\"饭店地址2\",\"contact\":\"010-68863249\",\"phone\":\"15651282709\",\"longitude\":\"107.417426\",\"latitude\":\"38.146711\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"3\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:37:21');
+INSERT INTO `sys_log` VALUES ('88', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"2\",\"name\":\"政府1\",\"address\":\"政府地址1\",\"contact\":\"025-36985471\",\"phone\":\"\",\"longitude\":\"107.465719\",\"latitude\":\"38.135813\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:37:48');
+INSERT INTO `sys_log` VALUES ('89', 'admin', '新增位置信息', 'io.renren.controller.XxLocationController.save()', '{\"id\":\"\",\"name\":\"政府2\",\"address\":\"政府地址2\",\"contact\":\"\",\"phone\":\"16598782321\",\"longitude\":\"107.502514\",\"latitude\":\"38.177579\",\"updateDate\":\"2017-7-26\",\"createDate\":\"2017-7-26\",\"category\":\"1\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:38:15');
+INSERT INTO `sys_log` VALUES ('90', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"8\",\"name\":\"酒店1\",\"address\":\"酒店地址1\",\"contact\":\"\",\"phone\":\"18756986987\",\"longitude\":\"107.511712\",\"latitude\":\"38.213424\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:38:36');
+INSERT INTO `sys_log` VALUES ('91', 'admin', '修改位置信息', 'io.renren.controller.XxLocationController.update()', '{\"id\":\"3\",\"name\":\"幼儿园1\",\"address\":\"幼儿园地址\",\"contact\":\"025-88888888\",\"phone\":\"\",\"longitude\":\"107.504813\",\"latitude\":\"38.119918\",\"updateDate\":\"2017-7-26\"}', '0:0:0:0:0:0:0:1', '2017-07-26 19:38:48');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -498,7 +650,7 @@ INSERT INTO `sys_menu` VALUES ('36', '33', '科室信息', 'yl/department.html',
 INSERT INTO `sys_menu` VALUES ('37', '33', '专家信息', 'yl/specialist.html', 'yl:specialist:list,yl:specialist:info,yl:specialist:save,yl:specialist:update,yl:specialist:delete', '1', 'fa fa-user', '204');
 INSERT INTO `sys_menu` VALUES ('38', '0', '会员管理', 'qq/users', null, '0', 'fa fa-users', '300');
 INSERT INTO `sys_menu` VALUES ('39', '0', '信息发布', null, null, '0', 'fa fa-info-circle', '400');
-INSERT INTO `sys_menu` VALUES ('40', '39', '位置管理', 'xx/location.html', null, '1', 'fa fa-map-marker', '401');
+INSERT INTO `sys_menu` VALUES ('40', '39', '位置管理', 'xx/location.html', 'xx:location:list,xx:location:save,xx:location:delete,xx:location:update,xx:location:select', '1', 'fa fa-map-marker', '401');
 
 -- ----------------------------
 -- Table structure for sys_oss
@@ -592,58 +744,6 @@ CREATE TABLE `sys_user_role` (
 INSERT INTO `sys_user_role` VALUES ('1', '2', '1');
 
 -- ----------------------------
--- Table structure for tb_issue
--- ----------------------------
-DROP TABLE IF EXISTS `tb_issue`;
-CREATE TABLE `tb_issue` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `address` varchar(500) DEFAULT NULL,
-  `contact` varchar(50) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `link` varchar(200) DEFAULT NULL,
-  `content` mediumtext,
-  `author` varchar(10) DEFAULT NULL,
-  `createDate` date DEFAULT NULL,
-  `updateDate` date DEFAULT NULL,
-  `category` int(10) NOT NULL,
-  `remark` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tb_issue
--- ----------------------------
-
--- ----------------------------
--- Table structure for tb_location
--- ----------------------------
-DROP TABLE IF EXISTS `tb_location`;
-CREATE TABLE `tb_location` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `address` varchar(500) DEFAULT NULL,
-  `contact` varchar(50) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `link` varchar(200) DEFAULT NULL,
-  `content` mediumtext,
-  `author` varchar(10) DEFAULT NULL,
-  `createDate` date DEFAULT NULL,
-  `updateDate` date DEFAULT NULL,
-  `category` int(10) NOT NULL,
-  `longitude` varchar(20) NOT NULL,
-  `latitude` varchar(20) NOT NULL,
-  `remark` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tb_location
--- ----------------------------
-INSERT INTO `tb_location` VALUES ('1', '重庆', '重庆市', '', '', '', '', '', '2017-07-11', '2018-07-01', '1', '106.474526', '29.587108', '');
-INSERT INTO `tb_location` VALUES ('2', '北京', '北京市', '', '', '', '', '', '2017-07-11', '2018-07-01', '1', '106', '29', '');
-
--- ----------------------------
 -- Table structure for tb_token
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_token`;
@@ -678,6 +778,66 @@ CREATE TABLE `tb_user` (
 -- Records of tb_user
 -- ----------------------------
 INSERT INTO `tb_user` VALUES ('1', 'mark', '13612345678', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '2017-03-23 22:37:41');
+
+-- ----------------------------
+-- Table structure for xx_issue
+-- ----------------------------
+DROP TABLE IF EXISTS `xx_issue`;
+CREATE TABLE `xx_issue` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(500) DEFAULT NULL,
+  `mobile` varchar(50) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `content` mediumtext,
+  `author` varchar(10) DEFAULT NULL,
+  `createDate` date DEFAULT NULL,
+  `updateDate` date DEFAULT NULL,
+  `category` int(10) NOT NULL,
+  `remark` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of xx_issue
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for xx_location
+-- ----------------------------
+DROP TABLE IF EXISTS `xx_location`;
+CREATE TABLE `xx_location` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(500) DEFAULT NULL,
+  `contact` varchar(50) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `content` mediumtext,
+  `author` varchar(10) DEFAULT NULL,
+  `createDate` date DEFAULT NULL,
+  `updateDate` date DEFAULT NULL,
+  `category` int(10) NOT NULL,
+  `longitude` varchar(20) NOT NULL,
+  `latitude` varchar(20) NOT NULL,
+  `remark` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of xx_location
+-- ----------------------------
+INSERT INTO `xx_location` VALUES ('2', '政府1', '政府地址1', '025-36985471', '', '', '', '', '2017-07-11', '2017-07-26', '1', '107.465719', '38.135813', '');
+INSERT INTO `xx_location` VALUES ('3', '幼儿园1', '幼儿园地址', '025-88888888', '', null, null, null, '2017-07-26', '2017-07-26', '2', '107.504813', '38.119918', null);
+INSERT INTO `xx_location` VALUES ('5', '幼儿园2', '幼儿园地址2', '', '18751861827', null, null, null, '2017-07-26', '2017-07-26', '2', '107.442148', '38.223856', null);
+INSERT INTO `xx_location` VALUES ('6', '兽医点1', '兽医点地址1', '025-89878987', '', null, null, null, '2017-07-26', '2017-07-26', '5', '107.38868', '38.183025', null);
+INSERT INTO `xx_location` VALUES ('7', '兽医点2', '兽医点地址2', '026-96966363', '', null, null, null, '2017-07-26', '2017-07-26', '5', '107.350736', '38.110379', null);
+INSERT INTO `xx_location` VALUES ('8', '酒店1', '酒店地址1', '', '18756986987', null, null, null, '2017-07-26', '2017-07-26', '4', '107.511712', '38.213424', null);
+INSERT INTO `xx_location` VALUES ('9', '酒店2', '酒店地址2', '', '16989657', null, null, null, '2017-07-26', '2017-07-26', '4', '107.455371', '38.090388', null);
+INSERT INTO `xx_location` VALUES ('10', '饭店1', '饭店地址1', '023-98787468', '', null, null, null, '2017-07-26', '2017-07-26', '3', '107.553106', '38.101293', null);
+INSERT INTO `xx_location` VALUES ('11', '饭店2', '饭店地址2', '010-68863249', '15651282709', null, null, null, '2017-07-26', '2017-07-26', '3', '107.417426', '38.146711', null);
+INSERT INTO `xx_location` VALUES ('12', '政府2', '政府地址2', '', '16598782321', null, null, null, '2017-07-26', '2017-07-26', '1', '107.502514', '38.177579', null);
 
 -- ----------------------------
 -- Table structure for yl_department

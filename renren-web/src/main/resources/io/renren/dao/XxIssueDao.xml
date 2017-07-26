@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="io.renren.dao.XxIssueDao">
+	<select id="queryObject" resultType="io.renren.entity.XxIssueEntity">
+		select * from xx_issue where id = #{id}
+	</select>
+	
+	<select id="queryList" parameterType="map" resultType="io.renren.entity.XxIssueEntity">
+		select * from xx_issue
+		<if test="name != null and name.trim() != ''">
+			and `name` like concat('%',#{name},'%')
+		</if>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+	<select id="queryTotal" parameterType="map" resultType="int">
+		select count(*) from xx_issue
+		<if test="name != null and name.trim() != ''">
+			and `name` like concat('%',#{name},'%')
+		</if>
+	</select>
+	
+	<insert id="save" parameterType="io.renren.entity.XxIssueEntity">
+		insert into xx_issue(`name`, remark)
+			values(#{name},#{remark})
+	</insert>
+	
+	<update id="update" parameterType="io.renren.entity.XxIssueEntity">
+		update xx_issue set `name` = #{name}, remark = #{remark}
+			 where id = #{id}
+	</update>
+
+	<delete id="deleteBatch" parameterType="int">
+		delete from xx_issue where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+	
+	
+</mapper>
