@@ -69,8 +69,9 @@ var vm = new Vue({
                 vm.showList = false;
                 vm.title = "修改";
                 vm.issue = r.issue;
+                CKEDITOR.instances.content.setData(r.issue.content);
             });
-		},
+        },
 		del: function (event) {
 			var ids = getSelectedRows();
 			if(ids == null){
@@ -97,6 +98,8 @@ var vm = new Vue({
 		},
 		saveOrUpdate: function (event) {
 			var url = vm.issue.id == null ? "../xx/issue/save" : "../xx/issue/update";
+			// alert(CKEDITOR.instances.content.getData());
+			vm.issue.content = CKEDITOR.instances.content.getData();
 			$.ajax({
 				type: "POST",
 			    url: url,
