@@ -1,6 +1,6 @@
 package io.renren.entity;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * 发布信息
@@ -18,10 +18,11 @@ public class XxIssueEntity {
 	private String link;//链接地址
 	private String content;//内容
 	private String author;//作者
-	private Date createDate;//创建日期
-	private Date updateDate;//更新日期
+	private Timestamp createDate;//创建日期
+	private Timestamp updateDate;//更新日期
 	private Integer category;//类目
 	private String remark;//备注
+	private String categoryName;//类目名称
 
 	public Integer getId() {
 		return id;
@@ -87,19 +88,19 @@ public class XxIssueEntity {
 		this.author = author;
 	}
 
-	public Date getCreateDate() {
+	public Timestamp getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(Timestamp createDate) {
 		this.createDate = createDate;
 	}
 
-	public Date getUpdateDate() {
+	public Timestamp getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(Date updateDate) {
+	public void setUpdateDate(Timestamp updateDate) {
 		this.updateDate = updateDate;
 	}
 
@@ -117,5 +118,13 @@ public class XxIssueEntity {
 
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 }

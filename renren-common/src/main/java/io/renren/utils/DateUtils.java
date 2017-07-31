@@ -1,5 +1,6 @@
 package io.renren.utils;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +42,9 @@ public class DateUtils {
     }
 
     public static void main(String[] args) {
-        Date date = strToDate("2017-7-9");
-        System.out.println(strToDate("2017-7-9"));
+        Timestamp time = new Timestamp(new Date().getTime());
+        System.out.println(time);
+//        Date date = strToDate("2017-7-9");
+//        System.out.println(strToDate("2017-7-9"));
     }
 }

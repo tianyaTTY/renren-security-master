@@ -10,7 +10,7 @@ $(function () {
             { label: '手机号', name: 'mobile', width: 60 },
             { label: '创建日期', name: 'createDate', width: 60 },
             { label: '更新日期', name: 'updateDate', width: 60 },
-            { label: '类目', name: 'category', width: 60 },
+            { label: '类目名', name: 'categoryName', width: 60 },
 			{ label: '备注', name: 'remark', width: 80 }
         ],
 		viewrecords: true,
@@ -46,6 +46,7 @@ var vm = new Vue({
 		q:{
 			key: null
 		},
+		category: null,
 		showList: true,
 		title: null,
 		issue: {}
@@ -99,6 +100,7 @@ var vm = new Vue({
 		saveOrUpdate: function (event) {
 			var url = vm.issue.id == null ? "../xx/issue/save" : "../xx/issue/update";
 			// alert(CKEDITOR.instances.content.getData());
+			// alert(vm.issue.createDate);
 			vm.issue.content = CKEDITOR.instances.content.getData();
 			$.ajax({
 				type: "POST",
@@ -120,7 +122,7 @@ var vm = new Vue({
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');
 			$("#jqGrid").jqGrid('setGridParam',{ 
-                postData:{'name': vm.q.name},
+                postData:{'name': vm.q.name,'category': vm.category},
                 page:page
             }).trigger("reloadGrid");
 		}

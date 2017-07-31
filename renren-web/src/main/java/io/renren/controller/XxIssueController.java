@@ -10,6 +10,9 @@ import io.renren.validator.ValidatorUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -34,16 +37,24 @@ public class XxIssueController extends AbstractController {
 	public R list(@RequestParam Map<String, Object> params){
 		//查询列表数据
 		Query query = new Query(params);
-		List<XxIssueEntity> orgList = xxIssueService.queryList(query);
+		List<XxIssueEntity> issueList = xxIssueService.queryList(query);
+		for (XxIssueEntity issue:issueList) {
+			if (issue.getCategory()==1){
+				issue.setCategoryName("旅游景点");
+			}
+			if (issue.getCategory()==2){
+				issue.setCategoryName("农牧业");
+			}
+		}
 		int total = xxIssueService.queryTotal(query);
 		
-		PageUtils pageUtil = new PageUtils(orgList, total, query.getLimit(), query.getPage());
+		PageUtils pageUtil = new PageUtils(issueList, total, query.getLimit(), query.getPage());
 		
 		return R.ok().put("page", pageUtil);
 	}
 
 	/**
-	 * 配置医疗组织
+	 * 配置发布信息
 	 */
 	@RequestMapping("/info/{id}")
 	@RequiresPermissions("xx:issue:info")
@@ -61,8 +72,10 @@ public class XxIssueController extends AbstractController {
 	@RequiresPermissions("xx:issue:save")
 	public R save(@RequestBody XxIssueEntity issue){
 		ValidatorUtils.validateEntity(issue);
-
-		xxIssueService.save(issue);
+		Timestamp sysTime = new Timestamp(new Date().getTime());
+		issue.setCreateDate(sysTime);
+		issue.setUpdateDate(sysTime);
+		xxIssueService.save(issue );
 		
 		return R.ok();
 	}
@@ -75,7 +88,9 @@ public class XxIssueController extends AbstractController {
 	@RequiresPermissions("xx:issue:update")
 	public R update(@RequestBody XxIssueEntity issue){
 		ValidatorUtils.validateEntity(issue);
-
+		Timestamp sysTime = new Timestamp(new Date().getTime());
+		issue.setUpdateDate(sysTime);
+		issue.setRemark("测试数据111");
 		xxIssueService.update(issue);
 		
 		return R.ok();
@@ -88,7 +103,6 @@ public class XxIssueController extends AbstractController {
 	@RequestMapping("/delete")
 	@RequiresPermissions("xx:issue:delete")
 	public R delete(@RequestBody Integer[] ids){
-		//TODO 关联删除需要做
 		xxIssueService.deleteBatch(ids);
 		
 		return R.ok();

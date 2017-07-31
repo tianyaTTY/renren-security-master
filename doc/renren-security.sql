@@ -792,8 +792,8 @@ CREATE TABLE `xx_issue` (
   `link` varchar(200) DEFAULT NULL,
   `content` mediumtext,
   `author` varchar(10) DEFAULT NULL,
-  `createDate` date DEFAULT NULL,
-  `updateDate` date DEFAULT NULL,
+  `createDate` TIMESTAMP NOT NULL,
+  `updateDate` TIMESTAMP NOT NULL,
   `category` int(10) NOT NULL,
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)

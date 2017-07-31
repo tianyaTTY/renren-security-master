@@ -6,9 +6,12 @@
 	</select>
 	
 	<select id="queryList" parameterType="map" resultType="io.renren.entity.XxIssueEntity">
-		select * from xx_issue
+		select * from xx_issue where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
+		</if>
+		<if test="category != null and category.trim() != ''">
+			and category = #{category}
 		</if>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
@@ -16,7 +19,7 @@
 	</select>
 	
 	<select id="queryTotal" parameterType="map" resultType="int">
-		select count(*) from xx_issue
+		select count(*) from xx_issue where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
 		</if>
@@ -28,7 +31,7 @@
 	</insert>
 	
 	<update id="update" parameterType="io.renren.entity.XxIssueEntity">
-		update xx_issue set `name` = #{name}, address = #{address}, mobile = #{mobile}, phone = #{phone}, link = #{link}, content = #{content}, author = #{author}, updateDate = #{updateDate}, remark = #{remark}
+		update xx_issue set `name` = #{name}, `address` = #{address}, `mobile` = #{mobile}, `phone` = #{phone}, `link` = #{link}, `content` = #{content}, `author` = #{author}, `updateDate` = #{updateDate}
 			 where id = #{id}
 	</update>
 
