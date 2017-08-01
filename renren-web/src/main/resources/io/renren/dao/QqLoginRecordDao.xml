@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="io.renren.dao.QqLoginRecordDao">
+	<select id="queryObject" resultType="io.renren.entity.QqLoginRecordEntity">
+		select * from qq_login_record where id = #{id}
+	</select>
+	
+	<select id="queryList" parameterType="map" resultType="io.renren.entity.QqLoginRecordEntity">
+		select r.*,m.username as memberName from qq_login_record r LEFT JOIN qq_member m ON r.memberId=m.id where 1=1
+		<if test="memberName != null and memberName.trim() != ''">
+			and `m.username` like concat('%',#{memberName},'%')
+		</if>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+	<select id="queryTotal" parameterType="map" resultType="int">
+		select count(*) from qq_login_record r LEFT JOIN qq_member m ON r.memberId=m.id where 1=1
+		<if test="memberName != null and memberName.trim() != ''">
+			and `m.username` like concat('%',#{memberName},'%')
+		</if>
+	</select>
+	
+	<insert id="save" parameterType="io.renren.entity.QqLoginRecordEntity">
+		insert into qq_login_record(`username`, remark)
+			values(#{name},#{remark})
+	</insert>
+	
+	<update id="update" parameterType="io.renren.entity.QqLoginRecordEntity">
+		update qq_login_record set `username` = #{username},`updateDate` = #{updateDate}
+			 where id = #{id}
+	</update>
+
+	<delete id="deleteBatch" parameterType="int">
+		delete from qq_login_record where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+	
+	
+</mapper>

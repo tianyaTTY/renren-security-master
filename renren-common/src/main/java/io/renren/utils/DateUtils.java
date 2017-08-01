@@ -41,10 +41,20 @@ public class DateUtils {
         return date;
     }
 
+    /**
+     * 格式yyyy-MM-dd HH:mm:ss
+     * @return 系统时间
+     */
+    public static String getSysTime(){
+        return format(new Date(),"yyyy-MM-dd HH:mm:ss");
+    }
+
     public static void main(String[] args) {
         Timestamp time = new Timestamp(new Date().getTime());
         System.out.println(time);
 //        Date date = strToDate("2017-7-9");
 //        System.out.println(strToDate("2017-7-9"));
+        String timeStr = format(new Date(),"yyyy-MM-dd HH:mm:ss");
+        System.out.println(timeStr);
     }
 }

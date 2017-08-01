@@ -3,8 +3,6 @@ package io.renren.entity;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-import java.util.Date;
-
 /**
  * 位置信息
  * 
@@ -23,8 +21,8 @@ public class XxLocationEntity {
 	private String link;//链接URL
 	private String content;//内容
 	private String author;//作者
-	private Date createDate;//创建时间
-	private Date updateDate;//更新时间
+	private String createDate;//创建时间
+	private String updateDate;//更新时间
 	private Integer category;//类目
 	private String longitude;//经度
 	private String latitude;//纬度
@@ -94,19 +92,19 @@ public class XxLocationEntity {
 		this.author = author;
 	}
 
-	public Date getCreateDate() {
+	public String getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(String createDate) {
 		this.createDate = createDate;
 	}
 
-	public Date getUpdateDate() {
+	public String getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(Date updateDate) {
+	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
 

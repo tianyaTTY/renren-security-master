@@ -18,8 +18,8 @@ public class XxIssueEntity {
 	private String link;//链接地址
 	private String content;//内容
 	private String author;//作者
-	private Timestamp createDate;//创建日期
-	private Timestamp updateDate;//更新日期
+	private String createDate;//创建日期
+	private String updateDate;//更新日期
 	private Integer category;//类目
 	private String remark;//备注
 	private String categoryName;//类目名称
@@ -88,19 +88,19 @@ public class XxIssueEntity {
 		this.author = author;
 	}
 
-	public Timestamp getCreateDate() {
+	public String getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(Timestamp createDate) {
+	public void setCreateDate(String createDate) {
 		this.createDate = createDate;
 	}
 
-	public Timestamp getUpdateDate() {
+	public String getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(Timestamp updateDate) {
+	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
 

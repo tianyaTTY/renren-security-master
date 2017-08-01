@@ -73,8 +73,8 @@ public class XxLocationController {
 			location.setCategory(StringUtils.parseInteger(params.get("category")));
 			location.setLatitude(StringUtils.parseString(params.get("latitude")));
 			location.setLongitude(StringUtils.parseString(params.get("longitude")));
-			location.setCreateDate(DateUtils.strToDate(StringUtils.parseString(params.get("createDate"))));
-			location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("createDate"))));
+			location.setCreateDate(DateUtils.getSysTime());
+			location.setUpdateDate(DateUtils.getSysTime());
 			xxLocationService.save(location);
 		}catch (Exception e){
 			R.error();
@@ -100,7 +100,7 @@ public class XxLocationController {
 			location.setCategory(StringUtils.parseInteger(params.get("category")));
 			location.setLatitude(StringUtils.parseString(params.get("latitude")));
 			location.setLongitude(StringUtils.parseString(params.get("longitude")));
-			location.setUpdateDate(DateUtils.strToDate(StringUtils.parseString(params.get("updateDate"))));
+			location.setUpdateDate(DateUtils.getSysTime());
 			xxLocationService.update(location);
 		}catch (Exception e){
 			R.error();

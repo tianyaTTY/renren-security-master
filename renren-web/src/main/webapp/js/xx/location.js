@@ -16,7 +16,7 @@ $.ajax({
     dataType: 'json',
     success:function(data){
         for(var i=0;i<data.length;i++){
-            addMarker(data[i].id,data[i].name, data[i].address,data[i].contact,data[i].longitude,data[i].latitude,data[i].category,data[i].createDate,data[i].phone);
+            addMarker(data[i].id,data[i].name, data[i].address,data[i].contact,data[i].longitude,data[i].latitude,data[i].category,data[i].phone);
         }
     },
     error: function(data){
@@ -24,7 +24,7 @@ $.ajax({
     }
 });
 
-function addMarker(id,name,address,contact,longitude,latitude,category,createDate,phone) {
+function addMarker(id,name,address,contact,longitude,latitude,category,phone) {
     var p = new BMap.Point(longitude,latitude);
     var marker = new BMap.Marker(p);//创建一个标准
     map.addOverlay(marker);//将标注增加到地图
@@ -58,7 +58,7 @@ function addMarker(id,name,address,contact,longitude,latitude,category,createDat
     });
     marker.setIcon(icon);//将图标放到容器中
     //marker.remove();
-    addClickHandler(marker,id,name,address,contact,title,createDate,category,phone);
+    addClickHandler(marker,id,name,address,contact,title,category,phone);
 }
 
 var opts = {
@@ -68,9 +68,9 @@ var opts = {
     enableMessage:true//设置允许信息窗发送短息
 };
 var curMarker;
-function addClickHandler(marker,id,name,address,contact,title,createDate,category,phone){
+function addClickHandler(marker,id,name,address,contact,title,category,phone){
     marker.addEventListener("click",function(e){
-        var content="<br/><input type='hidden' name='id' id='id' value="+id+"><input type='hidden' name='createDate' id='createDate' value="+createDate+">"+
+        var content="<br/><input type='hidden' name='id' id='id' value="+id+">"+
                 "<input type='hidden' name='lng' id='lng' value="+e.point.lng+"><input type='hidden' name='lat' id='lat' value="+e.point.lat+"><input type='hidden' name='category' id='category' value="+category+">"+
                 "<form class='form-horizontal'><div class='form-group'><div class='col-sm-2 control-label'>名称</div><div class='col-sm-10'><input type='text' class='form-control' placeholder='名称' id='name' name='name' value="+name+"></div></div>"+
                 "<div class='form-group'><div class='col-sm-2 control-label'>地址</div><div class='col-sm-10'><input type='text' id='address' class='form-control' placeholder='地址' name='address' value="+address+"></div></div>"+
@@ -202,24 +202,19 @@ function cancel() {
     map.closeInfoWindow();
 }
 function addEryuan() {
-    var myDate = new Date().toLocaleDateString();
-    addMarker('','','','','107.48','38.189',2,myDate,'');
+    addMarker('','','','','107.48','38.189',2,'');
 }
 function addShouyi() {
-    var myDate = new Date().toLocaleDateString();
-    addMarker('','','','','107.48','38.189',5,myDate,'');
+    addMarker('','','','','107.48','38.189',5,'');
 }
 function addJiudian() {
-    var myDate = new Date().toLocaleDateString();
-    addMarker('','','','','107.48','38.189',4,myDate,'');
+    addMarker('','','','','107.48','38.189',4,'');
 }
 function addFandian() {
-    var myDate = new Date().toLocaleDateString();
-    addMarker('','','','','107.48','38.189',3,myDate,'');
+    addMarker('','','','','107.48','38.189',3,'');
 }
 function addZhengfu() {
-    var myDate = new Date().toLocaleDateString();
-    addMarker('','','','','107.48','38.189',1,myDate,'');
+    addMarker('','','','','107.48','38.189',1,'');
 }
 function isStrNull(str) {
     if(str==null||str==""){

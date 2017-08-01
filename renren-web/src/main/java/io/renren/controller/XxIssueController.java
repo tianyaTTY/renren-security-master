@@ -3,6 +3,7 @@ package io.renren.controller;
 import io.renren.annotation.SysLog;
 import io.renren.entity.XxIssueEntity;
 import io.renren.service.XxIssueService;
+import io.renren.utils.DateUtils;
 import io.renren.utils.PageUtils;
 import io.renren.utils.Query;
 import io.renren.utils.R;
@@ -10,9 +11,6 @@ import io.renren.validator.ValidatorUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -72,7 +70,7 @@ public class XxIssueController extends AbstractController {
 	@RequiresPermissions("xx:issue:save")
 	public R save(@RequestBody XxIssueEntity issue){
 		ValidatorUtils.validateEntity(issue);
-		Timestamp sysTime = new Timestamp(new Date().getTime());
+		String sysTime = DateUtils.getSysTime();
 		issue.setCreateDate(sysTime);
 		issue.setUpdateDate(sysTime);
 		xxIssueService.save(issue );
@@ -88,9 +86,8 @@ public class XxIssueController extends AbstractController {
 	@RequiresPermissions("xx:issue:update")
 	public R update(@RequestBody XxIssueEntity issue){
 		ValidatorUtils.validateEntity(issue);
-		Timestamp sysTime = new Timestamp(new Date().getTime());
+		String sysTime = DateUtils.getSysTime();
 		issue.setUpdateDate(sysTime);
-		issue.setRemark("测试数据111");
 		xxIssueService.update(issue);
 		
 		return R.ok();

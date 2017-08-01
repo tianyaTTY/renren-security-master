@@ -792,8 +792,8 @@ CREATE TABLE `xx_issue` (
   `link` varchar(200) DEFAULT NULL,
   `content` mediumtext,
   `author` varchar(10) DEFAULT NULL,
-  `createDate` TIMESTAMP NOT NULL,
-  `updateDate` TIMESTAMP NOT NULL,
+  `createDate` varchar(20) NOT NULL,
+  `updateDate` varchar(20) NOT NULL,
   `category` int(10) NOT NULL,
   `remark` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -816,8 +816,8 @@ CREATE TABLE `xx_location` (
   `link` varchar(200) DEFAULT NULL,
   `content` mediumtext,
   `author` varchar(10) DEFAULT NULL,
-  `createDate` date DEFAULT NULL,
-  `updateDate` date DEFAULT NULL,
+  `createDate` varchar(20) NOT NULL,
+  `updateDate` varchar(20) NOT NULL,
   `category` int(10) NOT NULL,
   `longitude` varchar(20) NOT NULL,
   `latitude` varchar(20) NOT NULL,
@@ -1042,3 +1042,41 @@ INSERT INTO `yl_specialist` VALUES ('50', '张建军', '25', '4', '中医主任�
 INSERT INTO `yl_specialist` VALUES ('51', '闫玉生', '26', '4', '副主任检验师', '', '', '', '');
 INSERT INTO `yl_specialist` VALUES ('52', '赵亮', '26', '4', '副主任检验师', '', '', '', '');
 INSERT INTO `yl_specialist` VALUES ('53', '张浩', '27', '4', '公卫副主任医师', '', '', '', '');
+
+-- ----------------------------
+-- APP用户表
+-- ----------------------------
+DROP TABLE IF EXISTS `qq_member`;
+CREATE TABLE `qq_member` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL COMMENT '用户名',
+  `password` varchar(50) NOT NULL COMMENT '密码',
+  `email` varchar(50) DEFAULT NULL COMMENT '邮箱',
+  `address` varchar(500) DEFAULT NULL COMMENT '地址',
+  `phone` varchar(20) DEFAULT NULL COMMENT '电话号码',
+  `mobile` varchar(20) DEFAULT NULL COMMENT '手机号码',
+  `stepNum` varchar(10) DEFAULT NULL COMMENT '步数',
+  `ratingScore` varchar(10) DEFAULT NULL COMMENT '信用积分',
+  `registerDate` varchar(20) NOT NULL COMMENT '注册时间',
+  `updateDate` varchar(20) NOT NULL COMMENT '修改时间',
+  `name` varchar(20) DEFAULT NULL COMMENT '姓名',
+  `identityId` varchar(50) DEFAULT NULL COMMENT '身份证号码',
+  `notificationFlag` int(1) NOT NULL COMMENT '是否开启推送',
+  `QRCodePath` varchar(100) COMMENT '二维码路径',
+  `portraitPath` varchar(100) COMMENT '头像路径',
+  `remark` varchar(500) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- APP用户登录历史表
+-- ----------------------------
+DROP TABLE IF EXISTS `qq_loginhistory`;
+CREATE TABLE `qq_loginhistory` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `memberId` int(10) NOT NULL COMMENT 'app用户ID',
+  `unitType` varchar(20) NOT NULL COMMENT '登录设备型号',
+  `recordDate` varchar(20) NOT NULL COMMENT '登录日期',
+  `remark` varchar(500) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
