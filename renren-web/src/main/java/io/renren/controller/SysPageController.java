@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 系统页面视图
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月24日 下午11:05:27
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @Controller
 public class SysPageController {

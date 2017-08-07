@@ -89,7 +89,7 @@ public class XxIssueController extends AbstractController {
 		String sysTime = DateUtils.getSysTime();
 		issue.setUpdateDate(sysTime);
 		xxIssueService.update(issue);
-		
+
 		return R.ok();
 	}
 	

@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 注册
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-26 17:27
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("/api")

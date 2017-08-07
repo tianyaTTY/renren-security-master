@@ -33,10 +33,10 @@ import com.alibaba.fastjson.JSON;
 
 /**
  * 文件上传
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-25 12:13:26
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("sys/oss")

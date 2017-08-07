@@ -18,10 +18,10 @@ import java.util.Map;
 
 /**
  * 系统日志
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-08 10:40:56
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @Controller
 @RequestMapping("/sys/log")

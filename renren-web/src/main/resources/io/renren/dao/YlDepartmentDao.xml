@@ -37,7 +37,7 @@
 	</update>
 
 	<delete id="deleteBatch" parameterType="int">
-		delete from yl_department where id in
+		delete s,d from yl_specialist s LEFT JOIN yl_department d ON s.department=d.id where d.id in
 		<foreach item="id" collection="array" open="(" separator="," close=")">
 			#{id}
 		</foreach>

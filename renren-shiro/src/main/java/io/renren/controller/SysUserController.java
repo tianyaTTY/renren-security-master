@@ -21,10 +21,10 @@ import java.util.Map;
 
 /**
  * 系统用户
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年10月31日 上午10:40:10
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("/sys/user")

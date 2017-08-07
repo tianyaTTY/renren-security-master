@@ -120,7 +120,7 @@ public class YlOrganizationController extends AbstractController {
 	@RequestMapping("/delete")
 	@RequiresPermissions("yl:organization:delete")
 	public R delete(@RequestBody Integer[] ids){
-		//TODO 关联删除需要做
+		//关联删除机构下面所有的信息
 		ylOrganizationService.deleteBatch(ids);
 		
 		return R.ok();

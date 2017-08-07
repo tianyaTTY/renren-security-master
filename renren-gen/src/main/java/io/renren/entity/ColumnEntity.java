@@ -2,10 +2,10 @@ package io.renren.entity;
 
 /**
  * 列的属性
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年12月20日 上午12:01:45
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public class ColumnEntity {
 	//列名

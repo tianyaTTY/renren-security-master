@@ -40,4 +40,5 @@ io\renren\utils\Constant$ScheduleStatus.class
 io\renren\xss\SQLFilter.class
 io\renren\dao\BaseDao.class
 io\renren\utils\PageUtils.class
+io\renren\utils\StringUtils.class
 io\renren\validator\Assert.class

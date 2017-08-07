@@ -9,9 +9,9 @@ import java.util.UUID;
 
 /**
  * 云存储(支持七牛、阿里云、腾讯云、又拍云)
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-25 14:58
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public abstract class CloudStorageService {
     /** 云存储配置信息 */

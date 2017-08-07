@@ -19,10 +19,10 @@ import java.util.Map;
 
 /**
  * 角色管理
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月8日 下午2:18:33
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("/sys/role")

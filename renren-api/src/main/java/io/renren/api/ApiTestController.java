@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * API测试接口
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-23 15:47
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("/api")

@@ -7,9 +7,9 @@ import io.renren.utils.SpringContextUtils;
 
 /**
  * 文件上传Factory
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-26 10:18
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public final class OSSFactory {
     private static SysConfigService sysConfigService;

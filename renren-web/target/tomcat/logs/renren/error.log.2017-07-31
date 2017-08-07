@@ -1,2 +1,0 @@
-[ERROR][2017-07-31 15:30:14] com.alibaba.druid.filter.stat.StatFilter.internalAfterStatementExecute(StatFilter.java:465) slow sql 23754 millis. SELECT * FROM QRTZ_CRON_TRIGGERS WHERE SCHED_NAME = 'RenrenScheduler' AND TRIGGER_NAME = ? AND TRIGGER_GROUP = ?["TASK_1","DEFAULT"] 
-[ERROR][2017-07-31 15:30:22] com.alibaba.druid.filter.stat.StatFilter.internalAfterStatementExecute(StatFilter.java:465) slow sql 8206 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'RenrenScheduler' AND INSTANCE_NAME = ?[1501486214214,"3c-PC1501485209452"] 

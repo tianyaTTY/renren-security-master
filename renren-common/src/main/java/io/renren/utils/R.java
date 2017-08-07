@@ -5,10 +5,10 @@ import java.util.Map;
 
 /**
  * 返回数据
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年10月27日 下午9:59:27
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public class R extends HashMap<String, Object> {
 	private static final long serialVersionUID = 1L;

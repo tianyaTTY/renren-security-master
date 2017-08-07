@@ -147,7 +147,7 @@ public class YlDepartmentController extends AbstractController {
 	@RequestMapping("/delete")
 	@RequiresPermissions("yl:department:delete")
 	public R delete(@RequestBody Integer[] ids){
-		//TODO 关联删除需要做
+		//关联删除部门下面的专家
 		ylDepartmentService.deleteBatch(ids);
 		
 		return R.ok();

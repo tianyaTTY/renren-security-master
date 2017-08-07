@@ -29,10 +29,10 @@ import com.google.code.kaptcha.Producer;
 
 /**
  * 登录相关
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月10日 下午1:15:31
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @Controller
 public class SysLoginController {

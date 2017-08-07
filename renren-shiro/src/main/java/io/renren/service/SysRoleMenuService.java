@@ -6,10 +6,10 @@ import java.util.List;
 
 /**
  * 角色与菜单对应关系
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年9月18日 上午9:42:30
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public interface SysRoleMenuService {
 	

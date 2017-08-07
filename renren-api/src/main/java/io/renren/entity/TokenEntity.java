@@ -7,10 +7,10 @@ import java.util.Date;
 
 /**
  * 用户Token
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-23 15:22:07
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public class TokenEntity implements Serializable {
 	private static final long serialVersionUID = 1L;

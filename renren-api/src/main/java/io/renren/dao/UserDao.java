@@ -4,10 +4,10 @@ import io.renren.entity.UserEntity;
 
 /**
  * 用户
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017-03-23 15:22:06
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public interface UserDao extends BaseDao<UserEntity> {
 

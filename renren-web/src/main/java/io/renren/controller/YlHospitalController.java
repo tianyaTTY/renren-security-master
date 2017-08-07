@@ -136,7 +136,7 @@ public class YlHospitalController extends AbstractController {
 	@RequestMapping("/delete")
 	@RequiresPermissions("yl:hospital:delete")
 	public R delete(@RequestBody Integer[] ids){
-		//TODO 关联删除需要做
+		//关联删除科室和专家信息
 		ylHospitalService.deleteBatch(ids);
 		
 		return R.ok();

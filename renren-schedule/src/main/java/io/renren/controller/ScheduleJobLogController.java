@@ -17,10 +17,10 @@ import java.util.Map;
 
 /**
  * 定时任务日志
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年12月1日 下午10:39:52
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 @RestController
 @RequestMapping("/sys/scheduleLog")

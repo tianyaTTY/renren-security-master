@@ -7,10 +7,10 @@ import java.util.Map;
 
 /**
  * 定时任务
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月28日 上午9:55:32
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public interface ScheduleJobService {
 

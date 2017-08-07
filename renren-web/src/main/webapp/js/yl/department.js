@@ -111,7 +111,7 @@ var vm = new Vue({
 				return ;
 			}
 			
-			confirm('确定要删除选中的记录？', function(){
+			confirm('确定要删除选中的科室信息？此操作将同时删除科室下面所有的专家信息！', function(){
 				$.ajax({
 					type: "POST",
 				    url: "../yl/department/delete",

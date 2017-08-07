@@ -7,10 +7,10 @@ import org.apache.shiro.subject.Subject;
 
 /**
  * Shiro工具类
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年11月12日 上午9:49:19
+ *
+ * @author tangty
+ * @email tianyaTTY@gmail.com
+ * @date 2017年7月5日 下午6:43:36
  */
 public class ShiroUtils {
 

@@ -113,7 +113,7 @@ var vm = new Vue({
 				return ;
 			}
 			
-			confirm('确定要删除选中的记录？', function(){
+			confirm('确定要删除选中的医院信息？此操作将同时删除医院下面所有的科室和专家信息！', function(){
 				$.ajax({
 					type: "POST",
 				    url: "../yl/hospital/delete",
