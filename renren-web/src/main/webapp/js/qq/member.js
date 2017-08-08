@@ -47,10 +47,7 @@ var vm = new Vue({
         showList: true,
         title:null,
         roleList:{},
-        user:{
-            status:1,
-            roleIdList:[]
-        }
+        member:{}
     },
     methods: {
         query: function () {
@@ -59,37 +56,31 @@ var vm = new Vue({
         add: function(){
             vm.showList = false;
             vm.title = "新增";
-            vm.roleList = {};
-            vm.user = {status:1,roleIdList:[]};
-
-            //获取角色信息
-            this.getRoleList();
+            vm.member = {};
         },
         update: function () {
-            var userId = getSelectedRow();
-            if(userId == null){
+            var memberId = getSelectedRow();
+            if(memberId == null){
                 return ;
             }
 
             vm.showList = false;
             vm.title = "修改";
 
-            vm.getUser(userId);
-            //获取角色信息
-            this.getRoleList();
+            vm.getMember(memberId);
         },
         del: function () {
-            var userIds = getSelectedRows();
-            if(userIds == null){
+            var ids = getSelectedRows();
+            if(ids == null){
                 return ;
             }
 
             confirm('确定要删除选中的记录？', function(){
                 $.ajax({
                     type: "POST",
-                    url: "../sys/user/delete",
+                    url: "../qq/member/delete",
                     contentType: "application/json",
-                    data: JSON.stringify(userIds),
+                    data: JSON.stringify(ids),
                     success: function(r){
                         if(r.code == 0){
                             alert('操作成功', function(index){
@@ -103,12 +94,12 @@ var vm = new Vue({
             });
         },
         saveOrUpdate: function (event) {
-            var url = vm.user.userId == null ? "../sys/user/save" : "../sys/user/update";
+            var url = vm.member.id == null ? "../qq/member/save" : "../qq/member/update";
             $.ajax({
                 type: "POST",
                 url: url,
                 contentType: "application/json",
-                data: JSON.stringify(vm.user),
+                data: JSON.stringify(vm.member),
                 success: function(r){
                     if(r.code === 0){
                         alert('操作成功', function(index){
@@ -120,14 +111,14 @@ var vm = new Vue({
                 }
             });
         },
-        getUser: function(userId){
-            $.get("../sys/user/info/"+userId, function(r){
-                vm.user = r.user;
-            });
-        },
-        getRoleList: function(){
-            $.get("../sys/role/select", function(r){
-                vm.roleList = r.list;
+        getMember: function(memberId){
+            $.get("../qq/member/info/"+memberId, function(r){
+                vm.member = r.member;
+                if(r.member.notificationFlag == 1){
+                    $("#switch-size").checked=true;
+                }else{
+                    $("#switch-size").checked=false;
+                }
             });
         },
         reload: function (event) {

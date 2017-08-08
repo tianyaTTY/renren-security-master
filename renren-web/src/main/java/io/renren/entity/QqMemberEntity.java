@@ -24,6 +24,8 @@ public class QqMemberEntity {
 	private String QRCodePath;//二维码路径
 	private String portraitPath;//头像路径
 	private String remark;//备注
+	private boolean noFlag;//是否开启推送(true:开启，false:关闭)
+	private String check;//选框
 
 	public Integer getId() {
 		return id;
@@ -151,5 +153,21 @@ public class QqMemberEntity {
 
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public boolean isNoFlag() {
+		return noFlag;
+	}
+
+	public void setNoFlag(boolean noFlag) {
+		this.noFlag = noFlag;
+	}
+
+	public String getCheck() {
+		return check;
+	}
+
+	public void setCheck(String check) {
+		this.check = check;
 	}
 }

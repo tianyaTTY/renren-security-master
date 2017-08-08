@@ -1,3 +1,29 @@
-[2017-08-04 15:48:32] slow sql 17657 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'RenrenScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1501832923195,1501832881294] 
-[2017-08-04 15:48:39] slow sql 6954 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'RenrenScheduler' AND INSTANCE_NAME = ?[1501832912318,"3c-PC1501832777762"] 
-[2017-08-04 15:48:39] slow sql 6954 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'RenrenScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1501832900108,"WAITING"] 
+[2017-08-08 15:09:29] slow sql 1322 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'RenrenScheduler' AND INSTANCE_NAME = ?[1502176167791,"3c-PC1502159888611"] 
+[2017-08-08 15:22:36] slow sql 2549 millis. SELECT * FROM QRTZ_SCHEDULER_STATE WHERE SCHED_NAME = 'RenrenScheduler'[] 
+[2017-08-08 15:22:44] slow sql 1398 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'RenrenScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1502176950672,"WAITING"] 
+[2017-08-08 16:21:28] slow sql 4322 millis. select h.*,o.name as orgName from yl_hospital h LEFT JOIN yl_organization o ON h.orgId=o.id
+		  
+		 
+			limit ?, ?[0,10] 
+[2017-08-08 16:26:21] slow sql 1710 millis. SELECT TRIGGER_GROUP FROM QRTZ_PAUSED_TRIGGER_GRPS WHERE SCHED_NAME = 'RenrenScheduler' AND TRIGGER_GROUP = ?["DEFAULT"] 
+[2017-08-08 16:29:25] slow sql 1221 millis. select * from xx_location l[] 
+[2017-08-08 16:30:04] slow sql 1744 millis. insert into sys_log
+		(
+			`username`, 
+			`operation`, 
+			`method`, 
+			`params`, 
+			`ip`, 
+			`create_date`
+		)
+		values
+		(
+			?, 
+			?, 
+			?, 
+			?, 
+			?, 
+			?
+		)["admin","修改APP用户信息","io.renren.controller.QqMemberController.update()","{\"address\":\"江苏省南京市浦口区天润城十街区27幢801室\",\"email\":\"1197192589@qq.com\",\"id\":1,\"identityId\":\"321281199008...","0:0:0:0:0:0:0:1","2017-08-08 16:30:02"] 
+[2017-08-08 16:30:08] slow sql 1207 millis. update qq_member set `username` = ?,`updateDate` = ?
+			 where id = ?["tianyaTTY","2017-08-08 16:30:07",1] 

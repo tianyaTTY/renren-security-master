@@ -1,6 +1,6 @@
 // 百度地图API功能
 var map = new BMap.Map("allmap");    // 创建Map实例
-map.centerAndZoom(new BMap.Point(107.483829,38.189151), 12);  // 初始化地图,设置中心点坐标和地图级别
+map.centerAndZoom(new BMap.Point(107.483829,38.189151), 13);  // 初始化地图,设置中心点坐标和地图级别
 map.setCurrentCity("鄂托克前旗");          // 设置地图显示的城市 此项是必须设置的
 map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
 map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件

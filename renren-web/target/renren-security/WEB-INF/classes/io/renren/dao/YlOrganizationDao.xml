@@ -6,7 +6,7 @@
 	</select>
 	
 	<select id="queryList" parameterType="map" resultType="io.renren.entity.YlOrganizationEntity">
-		select * from yl_organization
+		select * from yl_organization where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
 		</if>
@@ -16,7 +16,7 @@
 	</select>
 	
 	<select id="queryTotal" parameterType="map" resultType="int">
-		select count(*) from yl_organization
+		select count(*) from yl_organization where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
 		</if>
@@ -33,7 +33,7 @@
 	</update>
 
 	<delete id="deleteBatch" parameterType="int">
-		delete from yl_organization where id in
+		delete s,d,h,o from yl_specialist s LEFT JOIN yl_department d ON s.department=d.id LEFT JOIN yl_hospital h ON d.hospitalId=h.id LEFT JOIN yl_organization o ON h.orgId=o.id where o.id in
 		<foreach item="id" collection="array" open="(" separator="," close=")">
 			#{id}
 		</foreach>

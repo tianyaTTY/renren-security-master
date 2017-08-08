@@ -6,7 +6,7 @@
 	</select>
 	
 	<select id="queryList" parameterType="map" resultType="io.renren.entity.YlOrganizationEntity">
-		select * from yl_organization
+		select * from yl_organization where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
 		</if>
@@ -16,7 +16,7 @@
 	</select>
 	
 	<select id="queryTotal" parameterType="map" resultType="int">
-		select count(*) from yl_organization
+		select count(*) from yl_organization where 1=1
 		<if test="name != null and name.trim() != ''">
 			and `name` like concat('%',#{name},'%')
 		</if>

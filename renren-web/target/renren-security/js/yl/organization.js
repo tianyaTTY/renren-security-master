@@ -71,7 +71,7 @@ var vm = new Vue({
 				return ;
 			}
 			
-			confirm('确定要删除选中的记录？', function(){
+			confirm('确定要删除选中的组织信息？此操作将同时删除组织下面所有的医院，科室和专家信息！', function(){
 				$.ajax({
 					type: "POST",
 				    url: "../yl/organization/delete",
